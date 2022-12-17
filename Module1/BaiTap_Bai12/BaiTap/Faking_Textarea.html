@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<textarea name="" id="text" cols="40" rows="10" oninput="changeText();"></textarea>
+
+<script>
+    let i=0;
+    let a;
+    let temp = [];
+    let fakeText = ["T", "Ô", "I", " ", "L", "À", " ", "M", "Ộ", "T", " ", "Đ", "Ứ", "A", " ", "N", "G", "Ố", "C", "!", "!"];
+    console.log(fakeText);
+    function changeText() {
+
+        i++;
+    }
+</script>
+</body>
+</html>

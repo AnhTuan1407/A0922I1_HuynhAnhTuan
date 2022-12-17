@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<style>
+    body {
+        font-size: 50px;
+    }
+
+    #add {
+        width: 100px;
+        height: 100px;
+    }
+
+    #pay {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<h1>MENU</h1>
+<form>
+    <ol>
+        <li>Cafe : 15.000 VND</li>
+        <li>Cam vắt : 25.000 VND</li>
+        <li>Nước ép cà rốt : 20.000 VND</li>
+        <li>Nước ép cà chua : 22.000 VND</li>
+        <li>Nước lọc : 5.000 VND</li>
+        <li>Nước dừa : 30.000 VND</li>
+        <li>Thoát</li>
+    </ol>
+</form>
+<input type="button" id="add" value="Add" onclick="addDish()">
+<input type="button" id="pay" value="Pay" onclick="pay()">
+<p id="result"></p>
+<script>
+    let total = 0;
+    let n;
+    let soLuong = 0;
+
+    function addDish() {
+        do {
+            soLuong = 0;
+            n = +prompt("Chọn thức uống: ");
+            switch (n) {
+                case 1: {
+                    soLuong = +prompt("Nhập số lượng: ");
+                    total += 15000 * soLuong;
+                    break;
+                }
+                case 2: {
+                    soLuong = +prompt("Nhập số lượng: ");
+                    total += 25000 * soLuong;
+                    break;
+                }
+                case 3: {
+                    soLuong = +prompt("Nhập số lượng: ");
+                    total += 20000 * soLuong;
+                    break;
+                }
+                case 4: {
+                    soLuong = +prompt("Nhập số lượng: ");
+                    total += 22000 * soLuong;
+                    break;
+                }
+                case 5: {
+                    soLuong = +prompt("Nhập số lượng: ");
+                    total += 5000 * soLuong;
+                    break;
+                }
+                case 6: {
+                    soLuong = +prompt("Nhập số lượng: ");
+                    total += 30000 * soLuong;
+                    break;
+                }
+            }
+        } while (n < 7);
+    }
+
+    function pay() {
+        document.getElementById("result").innerHTML = "Tổng tiền: " + total + " VND";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let num1 = +prompt("Nhập vào số thứ nhất: ");
+    let num2 = +prompt("Nhập vào số thứ hai: ");
+    function check(a, b) {
+        if (a > b)
+        {
+            alert(a + " lớn hơn " + b);
+        }else {
+            return a + b;
+        }
+    }
+    document.getElementById("result").innerHTML = check(num1, num2);
+</script>
+</body>
+</html>

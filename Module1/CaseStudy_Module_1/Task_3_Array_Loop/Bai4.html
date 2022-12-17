@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+
+    <style>
+        body {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // Cách này dài vcl, hơi ngu nhưng nhát sửa
+
+    let array = [];
+    let arrayNum = ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Không"];
+    let b = [];
+    let num = +prompt("Nhập số bất kỳ: ");
+    let temp = num;
+    while (temp > 0) {
+        let n = temp % 10;
+        temp = (temp / 10) - (n/10);
+        array.push(n);
+    }
+    array.reverse();
+    document.write("Số: " + num);
+    document.write("<br>");
+    for (let i = 0; i < array.length; i++) {
+        b[i] = (arrayNum[array[i] - 1]);
+    }
+    document.write("Chữ: " + b);
+</script>
+</body>
+</html>

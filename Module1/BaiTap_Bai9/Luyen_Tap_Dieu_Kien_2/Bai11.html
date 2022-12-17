@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 11</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Thu nhập của bạn(nghìn đồng)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="num1">
+        </td>
+
+        <td>
+            <button onclick="myFunction()">Check</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let money = +document.getElementById("num1").value;
+
+        if (money >= 10000000) {
+            document.getElementById("ketqua").innerHTML = "Thuế: " + money*0.2 + "(nghìn đồng)";
+        }
+        if (5000000 <= money && money < 10000000) {
+            document.getElementById("ketqua").innerHTML = "Thuế: " + money*0.1 + "(nghìn đồng)";
+        }
+        if (2500000 <= money && money < 5000000) {
+            document.getElementById("ketqua").innerHTML = "Thuế: " + money*0.05 + "(nghìn đồng)";
+        }
+        if (money < 2500000) {
+            document.getElementById("ketqua").innerHTML = "Thuế: " + money*0.01 + "(nghìn đồng)";
+        }
+
+    }
+</script>
+</html>

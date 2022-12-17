@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hàm kiểm tra ký tự số</h1>
+<p id="result"></p>
+<script>
+    function check(a) {
+        if (isNaN(a)) {
+            return "false";
+        } else
+            return "true";
+    }
+
+    let char = prompt("Nhập vào một ký tự: ");
+    document.getElementById("result").innerHTML = check(char);
+</script>
+</body>
+</html>

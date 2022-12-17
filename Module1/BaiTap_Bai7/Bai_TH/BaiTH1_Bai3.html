@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khai báo và sử dụng biến</title>
+</head>
+<body>
+<button onclick="Function()">Cộng 2 số a b</button>
+<p>Total: <span id="total"></span></p>
+</body>
+</html>
+<script>
+    function Function()
+    {
+        let a = prompt("Nhập vào số a: ");
+        a = parseFloat(a);
+        let b = prompt("Nhập vào số b: ");
+        b = parseFloat(b);
+        document.getElementById("total").innerHTML = a + b;
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+
+    <style>
+        body{
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let str;
+    str = prompt("Nhập chuỗi: ");
+    let array = [];
+    for (let i = 0; i < str.length; i++) {
+        if (!array.includes(str[i])) {
+            array.push(str[i]);
+        }
+    }
+    document.write("Có " + array.length + " ký tự khác nhau: " + array);
+</script>
+</body>
+</html>

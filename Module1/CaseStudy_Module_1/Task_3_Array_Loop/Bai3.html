@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+
+    <style>
+        body {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let a;
+    let b;
+    let maxFraction = numerators[0] / denominators[0];
+    let index = 0;
+    let j = 1;
+    for (let i = 1; i < numerators.length; i++) {
+        if (maxFraction < (numerators[i] / denominators[j])) {
+            maxFraction = numerators[i] / denominators[j];
+            index = i;
+            a = numerators[i];
+            b = denominators[j];
+        }
+        j++;
+    }
+    document.write("Phân số lớn nhất là: " + a + "/" + b + " có chỉ số: " + index);
+</script>
+</body>
+</html>

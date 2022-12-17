@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Cạnh a</td>
+        <td>Cạnh b</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="a">
+        </td>
+
+        <td>
+            <input type="text" id="b">
+        </td>
+
+        <td>
+            <button onclick="myFunction()">Area</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let area = (a * b) / 2;
+        if (isNaN(a) || isNaN(b)) {
+            document.getElementById("ketqua").innerHTML = "Vui lòng nhập các cạnh tam giác là số!!";
+        } else
+            document.getElementById("ketqua").innerHTML = "Diện tích tam giác vuông có cạnh " + a + " và " + b + " là : " + area;
+    }
+</script>
+</html>

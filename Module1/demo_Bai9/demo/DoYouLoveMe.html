@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <title>Do you love me?</title>
+</head>
+
+<body>
+<div id="content">
+    <h2 id="title">Do you love me?</h2>
+    <button type="button" id="yes" onclick="clickYes();">Yes</button>
+    <button type="button" id="no" class="no" onmouseover="mouseHover();" style="position: relative;">No</button>
+</div>
+<script>
+    function mouseHover() {
+        let a = document.getElementById('no');
+        let x = Math.floor(Math.random() * 500) + 1;
+        let y = Math.floor(Math.random() * 500) + 1;
+        a.style.left = x + "px";
+        a.style.top = y + "px";
+    }
+
+    function clickYes() {
+        alert("<3");
+    }
+</script>
+</body>
+
+</html>

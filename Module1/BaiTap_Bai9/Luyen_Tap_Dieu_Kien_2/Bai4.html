@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Width</td>
+        <td>Height</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="width">
+        </td>
+
+        <td>
+            <input type="text" id="height">
+        </td>
+
+        <td>
+            <button onclick="myFunction()">Area</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let width = +document.getElementById("width").value;
+        let height = +document.getElementById("height").value;
+        let area = height * width;
+        if (isNaN(height) || isNaN(width)) {
+            document.getElementById("ketqua").innerHTML = "Vui lòng nhập chiều dài và chiều rộng là số!!";
+        } else
+            document.getElementById("ketqua").innerHTML = "Diện tích hình chữ nhật có chiều dài " + height + " và chiều rộng " + width + " là : " + area;
+    }
+</script>
+</html>

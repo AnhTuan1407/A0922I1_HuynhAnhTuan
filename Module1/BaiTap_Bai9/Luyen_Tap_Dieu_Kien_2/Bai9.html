@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<table>
+    <h1>Triangle</h1>
+    <tr>
+        <td>Số a</td>
+        <td>Số b</td>
+        <td>Số c</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="a">
+        </td>
+
+        <td>
+            <input type="text" id="b">
+        </td>
+
+        <td>
+            <input type="text" id="c">
+        </td>
+        <td>
+            <button onclick="myFunction()">Check</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+
+        if (isNaN(a) || isNaN(b) || isNaN(c))
+        {
+            document.getElementById("ketqua").innerHTML = "Vui lòng nhập các cạnh là 1 số!";
+        }
+        else
+        {
+            if (a > 0 && b > 0 && c > 0 &&
+                a + b > c &&
+                b + c > a &&
+                a + c > b)
+            {
+                document.getElementById("ketqua").innerHTML = a + ", " + b + ", " + c + " là 3 cạnh của tam giác!";
+            }else
+                document.getElementById("ketqua").innerHTML = a + ", " + b + ", " + c + " không phải là 3 cạnh của tam giác!";
+        }
+    }
+</script>
+</html>

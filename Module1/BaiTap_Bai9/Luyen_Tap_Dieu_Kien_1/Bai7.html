@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Thời gian gọi điện thoại (phút)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="num1">
+        </td>
+
+        <td>
+            <button onclick="myFunction()">Check</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let time = +document.getElementById("num1").value;
+
+        if (time >= 60) {
+            document.getElementById("ketqua").innerHTML = "Cước phí điện thoại: " + time*500 + "(nghìn đồng)";
+        }
+        if (30 <= time && time < 60) {
+            document.getElementById("ketqua").innerHTML = "Cước phí điện thoại: " + time*1000 + "(nghìn đồng)";
+        }
+        if (5 <= time && time < 30) {
+            document.getElementById("ketqua").innerHTML = "Cước phí điện thoại: " + time*2000 + "(nghìn đồng)";
+        }
+        if (time < 5) {
+            document.getElementById("ketqua").innerHTML = "Cước phí điện thoại: " + time*5000 + "(nghìn đồng)";
+        }
+
+    }
+</script>
+</html>

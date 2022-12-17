@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>DICTIONARY</h1>
+<table>
+    <tr>
+        <th>English</th>
+        <td></td>
+        <th>Vietnamese</th>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="eng"></td>
+        <th>=</th>
+        <td><input type="text" id="viet"></td>
+        <td><input type="button" id="add" value="Add" onclick="add_word();"/></td>
+        <td><input type="button" id="find" value="Find" onclick="find_word();"/></td>
+        <td><input type="button" id="display" value="Display" onclick="display_word();"/></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><span id="anh"></span></td>
+        <td></td>
+        <td><span id="vie"></span></td>
+    </tr>
+</table>
+</body>
+<script>
+    let eng = [];
+    let viet = [];
+    let a = 0;
+    let b = 0;
+
+    function add_word() {
+        a = document.getElementById("eng");
+        eng.push(a.value);
+        b = document.getElementById("viet");
+        viet.push(b.value);
+        a.value = "";
+        b.value = "";
+    }
+
+    function display_word() {
+        let c = "</hr>";
+        let e = "</hr>";
+        for (let i = 0; i < eng.length; i++) {
+            c += "Eng: " + eng[i] + "<br>";
+            document.getElementById("anh").innerHTML = c;
+        }
+
+        for (let i = 0; i < viet.length; i++) {
+            e += "Vie: " + viet[i] + "<br>";
+            document.getElementById("vie").innerHTML = e;
+        }
+    }
+
+    function find_word() {
+        let x = prompt("Nhập từ tiếng anh cần tìm: ");
+        let check = true;
+        for (let i = 0; i < eng.length; i++) {
+            if (x === eng[i]) {
+                alert(eng[i] + " = " + viet[i]);
+                check = false;
+            }
+        }
+        if (check) {
+            alert("Từ điển chúng tôi ko có từ này!!!");
+        }
+    }
+</script>
+</html>

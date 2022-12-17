@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập số lượng phần tử của mảng: ");
+        if (n > 20) {
+            alert("n <= 20. Yêu cầu nhập lại!");
+        }
+    } while (n > 20);
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        let a = +prompt("Nhập phần tử a[" + i + "]: ");
+        array.push(a);
+    }
+    document.write("Mảng: " + array);
+    let tongChan = 0;
+    let tongLe = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            tongChan += array[i];
+        } else {
+            tongLe += array[i];
+        }
+    }
+    document.write("Kết quả = " + (tongChan - tongLe));
+</script>
+</body>
+</html>

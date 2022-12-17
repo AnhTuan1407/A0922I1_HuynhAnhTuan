@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hàm kiểm tra số nhỏ nhất</h1>
+<p id="result"></p>
+<script>
+    function min(a, b, c) {
+        if (a < b && a < c) {
+            return a;
+        } else if (b < a && b < c) {
+            return b;
+        } else
+            return c;
+
+    }
+
+    let num1 = +prompt("Nhập vào số 1: ");
+    let num2 = +prompt("Nhập vào số 2: ");
+    let num3 = +prompt("Nhập vào số 3: ");
+    document.getElementById("result").innerHTML = "Số nhỏ nhất trong 3 số " + num1 + ", " + num2 + ", " + num3 + " là: " + min(num1, num2, num3);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình tròn</title>
+</head>
+<body>
+<button onclick="myFunction()">Hình Tròn</button>
+<p>Radius: <span id="radius"></span></p>
+<p>Area: <span id="area"></span></p>
+</body>
+</html>
+<script>
+    function myFunction() {
+        let radius = prompt("Input radius: ");
+        radius = parseFloat(radius);
+        document.getElementById("radius").innerHTML = radius;
+
+        document.getElementById("area").innerHTML = radius*radius*3.14;
+    }
+</script>

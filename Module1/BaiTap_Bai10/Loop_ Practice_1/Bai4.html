@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h2>Fibonacy</h2>
+</body>
+<script>
+    let temp = 0;
+    let i = 1;
+    let fibonacy = 0;
+    let number = +prompt("Nhập só: ");
+    while (true) {
+        fibonacy = i + temp;
+        temp = i;
+        i = fibonacy;
+
+        if (fibonacy % number === 0) {
+            document.write("Số đầu tiên trong dãy Fibonacy chia hết cho " + number + ": " + fibonacy);
+            break;
+        }
+    }
+    const body = document.body;
+    body.style.fontWeight = "700";
+    body.style.fontSize = "25px";
+    body.style.color = "rgb(225 ,0 ,150 )";
+</script>
+</html>

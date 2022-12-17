@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Number</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="number">
+        </td>
+        <td>
+            <button onclick="myFunction()">Check</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let number = +document.getElementById("number").value;
+
+        if (number > 0)
+        {
+            document.getElementById("ketqua").innerHTML = number + " lớn hơn 0";
+        }else
+            document.getElementById("ketqua").innerHTML = number +" nhỏ hơn 0";
+    }
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <button onclick="myFunction()">Đổi độ</button>
+    <p><span id="c"></span> độ C = <span id="f"></span> độ F</p>
+</body>
+</html>
+<script>
+    function myFunction() {
+        let doC = prompt("Nhập độ C: ");
+        c = parseFloat(doC);
+        document.getElementById("c").innerHTML = doC;
+
+        document.getElementById("f").innerHTML = (doC/5)*9+32;
+    }
+</script>

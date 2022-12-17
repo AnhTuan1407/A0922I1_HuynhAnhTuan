@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Age</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="age">
+        </td>
+        <td>
+            <button onclick="myFunction()">Check</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let age = +document.getElementById("age").value;
+        if (isNaN(age))
+        {
+            document.getElementById("ketqua").innerHTML = "Vui lòng nhập 1 số!";
+        }
+        else
+        {
+            if (age > 0 && age <=120)
+            {
+                document.getElementById("ketqua").innerHTML = age + " là tuổi của 1 người";
+            }else
+                document.getElementById("ketqua").innerHTML = age +" không phải là tuổi của 1 người";
+        }
+    }
+</script>
+</html>

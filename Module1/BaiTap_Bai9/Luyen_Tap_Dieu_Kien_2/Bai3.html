@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Cạnh hình vuông</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="num1">
+        </td>
+
+        <td>
+            <button onclick="myFunction()">Area</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+</body>
+<script>
+    function myFunction() {
+        let a = +document.getElementById("num1").value;
+        let area = Math.pow(a, 2);
+        if (isNaN(a)) {
+            document.getElementById("ketqua").innerHTML = "Vui lòng nhập cạnh hình vuông là số!!";
+        } else
+            document.getElementById("ketqua").innerHTML = "Diện tích hình vuông có cạnh " + a + "là : " + area;
+    }
+</script>
+</html>

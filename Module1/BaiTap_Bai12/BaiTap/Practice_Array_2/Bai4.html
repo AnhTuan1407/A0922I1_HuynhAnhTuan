@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+
+<script>
+    let string = prompt("Nhập chuỗi: ");
+    document.write("Chuỗi: ");
+    document.write(string);
+    document.write("<br>");
+
+    let count = 1;
+    if (string[0] === " ")
+    {
+        count--;
+    }
+    for (let k = 0; k < string.length; k++) {
+        if (string[k] === " " && string[k + 1] !== " ") {
+            count++;
+        }
+    }
+    document.write("Có " + count + " từ trong chuỗi.");
+</script>
+</body>
+</html>

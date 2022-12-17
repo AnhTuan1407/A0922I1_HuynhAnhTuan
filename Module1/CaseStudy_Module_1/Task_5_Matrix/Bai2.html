@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+
+    <style>
+        body {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let m = +prompt("Nhập m: ");
+    let n = +prompt("Nhập n: ");
+
+    let array = [];
+    for (let i = 0; i < m; i++) {
+        array[i] = [];
+        for (let j = 0; j < n; j++) {
+            array[i][j] = +prompt("Nhập phần tử a[" + i + "][" + j + "]: ");
+        }
+    }
+    console.log(array);
+
+    function checkPrime(a) {
+        if (a < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    // function prime(array) {
+    //     let arrPrime = [];
+    //     let count = 0;
+    //     for (let i = 0; i < array.length; i++) {
+    //         console.log(checkPrime(array[i]));
+    //         if (checkPrime(array[i]) === true) {
+    //             arrPrime.push(array[i]);
+    //             count++;
+    //         }
+    //     }
+    //     return "Có " + count + " số nguyên tố trong mảng: " + arrPrime;
+    // }
+    let count = 0;
+    let arrPrime = [];
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (checkPrime(array[i][j]) === true) {
+                arrPrime.push(array[i][j]);
+                count++;
+            }
+        }
+    }
+    document.write("Có " + count + " số nguyên tố trong mảng: " + arrPrime);
+    console.log(checkPrime(2));
+    document.write(prime(array));
+</script>
+</body>
+</html>

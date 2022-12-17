@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+<body>
+<h1>Sample Screen</h1>
+<input type="text" id="value">
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+<input type="button" id="find" value="Find" onclick="find_element();"/>
+<p id="result"></p>
+</body>
+<script>
+    let array = [];
+    let x = 0;
+
+    function add_element_to_array() {
+        // let x = document.getElementById("value").value;
+        // array.push(x);
+        array[x] = document.getElementById("value").value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("txtValue ").value = "";
+    }
+
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+
+    function find_element() {
+        let x = prompt("Nhập giá trị cần tìm: ");
+        for (let i = 0; i < array.length; i++) {
+            if (x === array[i]) {
+                alert("Phần tử " + i + " có giá trị " + x);
+            } else if (i === array.length - 1) {
+                alert("Mảng không có phần tử cần tìm!!!")
+            }
+        }
+    }
+</script>
+</html>

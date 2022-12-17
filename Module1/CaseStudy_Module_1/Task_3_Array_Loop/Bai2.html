@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+
+    <style>
+        body {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let a = [7, 2, 5, 3, 5, 3];
+    let b = [7, 2, 5, 4, 6, 3, 5, 3, 4, 6];
+    let check = true;
+    let missingValue = [];
+    let max;
+    let min;
+    if (a.length > b.length) {
+        max = a.length;
+        min = b.length;
+    } else {
+        max = b.length;
+        min = a.length;
+    }
+    let count = 0;
+    for (let i = 0; i < max; i++) {
+        for (let j = 0; j < min; j++) {
+            if (b[i] === a[j]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            for (let j = 0; j < missingValue.length; j++) {
+                if (b[i] === missingValue[j]) {
+                    check = false;
+                }
+            }
+            if (check === true) {
+                missingValue.push(b[i]);
+            }
+        }
+        count = 0;
+    }
+    document.write("Missing Value: " + missingValue);
+</script>
+</body>
+</html>

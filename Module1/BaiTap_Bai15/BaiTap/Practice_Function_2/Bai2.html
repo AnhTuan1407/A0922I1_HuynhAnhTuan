@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hàm tính diện tích và chu vi hình tròn</h1>
+<p id="perimeter"></p>
+<p id="area"></p>
+<script>
+    function area(a) {
+        return a * a * 3.14;
+    }
+
+    function perimeter(a) {
+        return a * 2 * 3.14;
+    }
+
+    let radius = +prompt("Nhập bán kính hình tròn: ")
+    document.getElementById("perimeter").innerHTML = "Chu vi hình tròn bán kính " + radius + " là: " + perimeter(radius);
+    document.getElementById("area").innerHTML = "Diện tích hình tròn bán kính " + radius + " là: " + area(radius);
+</script>
+</body>
+</html>

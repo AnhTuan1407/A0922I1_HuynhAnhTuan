@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let A = new Array(10)
+    for (let i = 0; i < A.length; i++) {
+        A[i] = parseInt(prompt("Nhập vào phần tử thứ a " + (i + 1) + ":"))
+    }
+    let B = new Array(10)
+    for (let i = 0; i < B.length; i++) {
+        B[i] = parseInt(prompt("Nhập vào phần tử thứ b " + (i + 1) + ":"))
+    }
+    let C = new Array(20);
+    C = A.concat(B)
+    document.write(C + " ");
+</script>

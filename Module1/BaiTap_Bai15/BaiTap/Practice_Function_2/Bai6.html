@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hàm kiểm tra số dương</h1>
+<p id="result"></p>
+<script>
+    function check(a) {
+        if (a > 0) {
+            return "True";
+        } else
+            return "False";
+    }
+
+    let num = prompt("Nhập vào một số: ");
+    document.getElementById("result").innerHTML = check(num);
+</script>
+</body>
+</html>
