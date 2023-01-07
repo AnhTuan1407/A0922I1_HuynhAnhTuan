@@ -10,6 +10,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -32,7 +33,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/Chill/Furama&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/Chill/A0922I1_HuynhAnhTuan/Module2&quot;
   }
 }</component>
   <component name="RunManager">
@@ -80,7 +81,18 @@
       <workItem from="1671727492514" duration="6610000" />
       <workItem from="1671780238304" duration="1620000" />
       <workItem from="1671792483412" duration="5781000" />
-      <workItem from="1671899467971" duration="2176000" />
+      <workItem from="1671899467971" duration="2733000" />
+      <workItem from="1672052617045" duration="7223000" />
+      <workItem from="1672207214389" duration="4148000" />
+      <workItem from="1672241234991" duration="866000" />
+      <workItem from="1672257235251" duration="8000" />
+      <workItem from="1672399279477" duration="6709000" />
+      <workItem from="1672468003539" duration="955000" />
+      <workItem from="1672819335481" duration="1022000" />
+      <workItem from="1672836444919" duration="5834000" />
+      <workItem from="1672972443048" duration="3349000" />
+      <workItem from="1673003955915" duration="2717000" />
+      <workItem from="1673119864512" duration="1011000" />
     </task>
     <servers />
   </component>
