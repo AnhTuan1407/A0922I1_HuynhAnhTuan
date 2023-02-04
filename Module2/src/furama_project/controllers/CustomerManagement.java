@@ -36,9 +36,7 @@ public class CustomerManagement {
                 }
 
                 case 4: {
-                    FuramaController furamaController = new FuramaController();
-                    furamaController.displayMainMenu();
-                    break;
+                    return;
                 }
 
                 default: {

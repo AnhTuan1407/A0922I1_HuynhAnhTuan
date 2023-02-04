@@ -35,9 +35,7 @@ public class EmployeeManagement {
                 }
 
                 case 4: {
-                    FuramaController furamaController = new FuramaController();
-                    furamaController.displayMainMenu();
-                    break;
+                    return;
                 }
 
                 default: {

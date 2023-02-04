@@ -134,8 +134,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                         }
 
                         case 10: {
-                            EmployeeManagement employeeManagement = new EmployeeManagement();
-                            employeeManagement.employeeMenu();
+                            return;
                         }
                     }
                 } else {
