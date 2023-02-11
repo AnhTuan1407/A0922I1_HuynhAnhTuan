@@ -12,6 +12,7 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -117,6 +118,9 @@
       <workItem from="1675257322671" duration="2011000" />
       <workItem from="1675424815740" duration="2335000" />
       <workItem from="1675517264660" duration="13212000" />
+      <workItem from="1675785897132" duration="1000" />
+      <workItem from="1675863611706" duration="622000" />
+      <workItem from="1676124930322" duration="14080000" />
     </task>
     <servers />
   </component>
