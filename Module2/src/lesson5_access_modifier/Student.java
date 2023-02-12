@@ -1,4 +1,4 @@
-package lesson_5_access_modifier;
+package lesson5_access_modifier;
 
 public class Student {
     private String name;

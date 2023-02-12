@@ -1,4 +1,4 @@
-package lesson_5_access_modifier;
+package lesson5_access_modifier;
 
 public class Circle {
     private double radius = 1.0;
