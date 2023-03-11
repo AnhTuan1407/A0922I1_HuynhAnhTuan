@@ -22,6 +22,17 @@ public abstract class Person {
         this.emailAddress = emailAddress;
     }
 
+    public Person(String[] result)
+    {
+        this.idPerson = result[0];
+        this.namePerson = result[1];
+        this.dateOfBirth = result[2];
+        this.sex = result[3];
+        this.identityCard = result[4];
+        this.phoneNumber = result[5];
+        this.emailAddress = result[6];
+    }
+
     public String getIdPerson() {
         return idPerson;
     }
@@ -76,5 +87,10 @@ public abstract class Person {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    @Override
+    public String toString() {
+        return idPerson + "," + namePerson + "," + dateOfBirth + "," + sex + "," + identityCard + "," + phoneNumber + "," + emailAddress;
     }
 }

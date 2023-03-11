@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8babe9f6-e21f-44bb-8c61-006c033a9a84" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Kotlin Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -34,20 +37,28 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/PC/Desktop/Chill/A0922I1_HuynhAnhTuan/Module2/src/lesson15_exception_debug/demo",
+    "last_opened_file_path": "C:/Users/PC/Desktop/Chill/A0922I1_HuynhAnhTuan/Module2/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src" />
       <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson15_exception_debug\demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson15_exception_debug" />
       <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src" />
+      <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\on_tap_module2" />
+      <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\mobile" />
+      <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson16_text_file\demo" />
+      <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson15_exception_debug" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.FuramaController">
     <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="furama_project.controllers.FuramaController" />
       <module name="Module2" />
@@ -87,8 +98,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="lesson16_text_file.read_file.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson16_text_file.read_file.Main" />
+      <module name="Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson16_text_file.read_file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.lesson16_text_file.read_file.Main" />
         <item itemvalue="Application.FuramaController" />
         <item itemvalue="Application.LongestString" />
         <item itemvalue="Application.Main" />
@@ -150,6 +175,26 @@
       <workItem from="1676639012341" duration="4150000" />
       <workItem from="1676644655112" duration="447000" />
       <workItem from="1676728626893" duration="2708000" />
+      <workItem from="1676881151215" duration="386000" />
+      <workItem from="1676891983534" duration="8822000" />
+      <workItem from="1676994127737" duration="3971000" />
+      <workItem from="1677048013671" duration="2000" />
+      <workItem from="1677062466443" duration="10312000" />
+      <workItem from="1677171599264" duration="4443000" />
+      <workItem from="1677197232229" duration="1552000" />
+      <workItem from="1677236259768" duration="5024000" />
+      <workItem from="1677305947609" duration="3080000" />
+      <workItem from="1677345482160" duration="6142000" />
+      <workItem from="1677412600096" duration="10107000" />
+      <workItem from="1677496141778" duration="11974000" />
+      <workItem from="1677605300370" duration="8558000" />
+      <workItem from="1677668196232" duration="4300000" />
+      <workItem from="1677673045066" duration="5022000" />
+      <workItem from="1677768864837" duration="649000" />
+      <workItem from="1677814888664" duration="43000" />
+      <workItem from="1677817865492" duration="650000" />
+      <workItem from="1677819893501" duration="602000" />
+      <workItem from="1677837828128" duration="5635000" />
     </task>
     <servers />
   </component>

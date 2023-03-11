@@ -5,7 +5,9 @@ import furama_project.models.Employee;
 import furama_project.type.Level;
 import furama_project.type.Position;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
@@ -15,13 +17,32 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void addNew() {
         Employee employee = new Employee();
         employee.input();
-        employees.add(employee);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("src/furama_project/data/employee", true))) {
+                bufferedWriter.write(employee.toString());
+                bufferedWriter.write("\n");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void display() {
-        for (Employee e : employees) {
-            e.output();
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("src/furama_project/data/employee"))) {
+            String line = null;
+            while ((line = bufferedReader.readLine()) != null)
+            {
+                if (line.trim().equals(" "))
+                {
+                    continue;
+                }
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

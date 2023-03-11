@@ -2,7 +2,9 @@ package furama_project.models;
 
 import furama_project.type.RentalType;
 
-public class House extends Facility{
+import java.util.Scanner;
+
+public class House extends Facility {
     protected String roomStandard;
     protected double numberFloors;
 
@@ -31,4 +33,27 @@ public class House extends Facility{
         this.numberFloors = numberFloors;
     }
 
+
+    public void input() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Service Name: ");
+        this.serviecName = scanner.nextLine();
+        System.out.println("Enter Usable Area: ");
+        this.usableArea = scanner.nextInt();
+        System.out.println("Enter Rental Cost: ");
+        this.rentalCosts = scanner.nextInt();
+        System.out.println("Enter Maximum People: ");
+        this.maximumPeople = scanner.nextInt();
+        System.out.println("Enter Rental Type: ");
+        this.rentalType = RentalType.displayRentalType();
+        System.out.println("Enter Room Standard: ");
+        scanner.nextLine();
+        this.roomStandard = scanner.nextLine();
+        System.out.println("Enter Number Floors: ");
+        this.numberFloors = scanner.nextInt();
+    }
+
+    public void output() {
+        System.out.print("Service Name: " + this.serviecName + "\t\t|| Usable Area: " + this.usableArea + "\t\t|| Rental Cost: " + this.rentalCosts + "\t\t|| Maximum People: " + this.maximumPeople + "\t\t|| Rental Type: " + this.rentalType + "\t\t|| Room Standard: " + this.roomStandard + "\t\t|| Number Floors: " + this.numberFloors);
+    }
 }

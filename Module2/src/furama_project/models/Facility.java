@@ -2,6 +2,8 @@ package furama_project.models;
 
 import furama_project.type.RentalType;
 
+import java.util.Scanner;
+
 public abstract class Facility {
     protected String serviecName;
     protected double usableArea;

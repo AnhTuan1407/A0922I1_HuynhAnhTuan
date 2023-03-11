@@ -21,6 +21,13 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
+    public Employee(String[] result) {
+        super(result);
+//        this.level = result[7];
+//        this.position = result[8];
+        this.salary = Integer.parseInt(result[9]);
+    }
+
     public Level getLevel() {
         return level;
     }
@@ -70,5 +77,10 @@ public class Employee extends Person {
 
     public void output() {
         System.out.println("ID Employee: " + this.idPerson + "\t|| Name Employee: " + this.namePerson + "\t|| BirthDay: " + this.dateOfBirth + "\t|| Sex: " + this.sex + "\t|| Identity Card: " + this.identityCard + "\t|| Phone Number: " + this.phoneNumber + "\t|| Email Address: " + this.emailAddress + "\t|| Level: " + this.level + "\t|| Position: " + this.position + "\t|| Salary: " + this.salary);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "," + level + "," + position + "," + salary;
     }
 }

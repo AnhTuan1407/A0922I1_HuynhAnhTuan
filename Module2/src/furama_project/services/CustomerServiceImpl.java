@@ -9,6 +9,7 @@ import furama_project.type.Level;
 import furama_project.type.Position;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
