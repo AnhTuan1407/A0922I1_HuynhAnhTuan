@@ -7,9 +7,8 @@ create table class(
 
 select * from class;
 insert into class(id, name_class)
-values (1, 'A0922I1');
-insert into class(id, name_class)
-value (2, 'A0123I1');
+values (1, 'A0922I1'),
+	(2, 'A0123I1');
 
 create table teacher(
 	id int,
