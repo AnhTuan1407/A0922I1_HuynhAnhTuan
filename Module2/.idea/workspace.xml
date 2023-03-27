@@ -37,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/PC/Desktop/Chill/A0922I1_HuynhAnhTuan/Module2/src",
+    "last_opened_file_path": "C:/Users/PC/Desktop/Chill/A0922I1_HuynhAnhTuan/Module2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +58,7 @@
       <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson15_exception_debug" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FuramaController">
+  <component name="RunManager">
     <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="furama_project.controllers.FuramaController" />
       <module name="Module2" />
@@ -195,6 +195,7 @@
       <workItem from="1677817865492" duration="650000" />
       <workItem from="1677819893501" duration="602000" />
       <workItem from="1677837828128" duration="5635000" />
+      <workItem from="1679618247883" duration="2232000" />
     </task>
     <servers />
   </component>
