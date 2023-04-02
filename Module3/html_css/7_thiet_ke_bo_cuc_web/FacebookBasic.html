@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+</head>
+
+<style>
+    .container > div{
+        border: 1px solid #ffffff;
+        font-size: 30px;
+        padding: 30px;
+    }
+
+    .header {
+        grid-area: header;
+        background-color: yellow;
+    }
+
+    .left {
+        grid-area: left;
+        background-color: green;
+    }
+
+    .right {
+        grid-area: right;
+        background-color: green;
+    }
+
+    .content {
+        grid-area: content;
+        background-color: #e4e4e4;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'left content right'
+        ;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        padding: 0 0 10px;
+        text-align: -webkit-match-parent;
+    }
+
+    .logo {
+        display: block;
+        width: 300px;
+        border: 1px solid black;
+    }
+
+    .menu {
+        display: block;
+        width: 400px;
+        border: 1px solid black;
+    }
+
+</style>
+
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <span>
+                Facebook
+            </span>
+
+            <span>
+                <input type="text" placeholder="Tìm kiếm trên Facebook" class="search">
+            </span>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a target="_self" href="">Home</a>
+                </li>
+
+                <li>
+                    <a target="_self" href="">Watch</a>
+                </li>
+
+                <li>
+                    <a target="_self" href="">Marketplace</a>
+                </li>
+
+                <li>
+                    <a target="_self" href="">Group</a>
+                </li>
+
+                <li>
+                    <a target="_self" href="">Game</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="left">
+
+    </div>
+
+    <div class="content">
+
+    </div>
+
+    <div class="right">
+
+    </div>
+</div>
+</body>
+</html>

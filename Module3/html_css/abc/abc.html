@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale= 1.0">
+    <title>AAlo</title>
+    <link rel="stylesheet" href="abc\perform.css">
+</head>
+<style>
+    body {
+        min-height: 100vh;
+        background-color: #778da9;
+        overflow: hidden;
+    }
+    .wrraper {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+<body>
+<div class="wrraper finisher-header">
+    <div id="main">
+        <div id="body">
+            <div class="fet"><button class="opr ad" onclick="add()" data-cal="+">Plus</button></div>
+            <div class="fet"><button class="opr su" onclick="sub()" data-cal="-">Subtract</button></div>
+            <div class="fet"><button class="opr dl" onclick="del()" >Reset</button></div>
+            <div class="fet"><button class="opr mu" onclick="mut()" data-cal="*">Mutiply</button></div>
+            <div class="fet"><button class="opr de" onclick="div()" data-cal="/">Divide</button></div>
+            <div class="fet"><button class="opr ex" onclick="ex()" >Exit</button></div>
+        </div>
+        <div id="head">
+            <div class="ctn" >
+                <div class="row"><input class="tada numA" type="text" placeholder="input a "></div>
+                <div class="row"><input class="tada numB" type="text" placeholder="input b"></div>
+                <div class="row"><input class="tada result" type="text" placeholder="result" readonly="true"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    let result = document.querySelector(".tada.result");
+    let numA = document.querySelector(".tada.numA");
+    let numB = document.querySelector(".tada.numB");
+
+    const del = () => {
+        numA.value = "";
+        numB.value = "";
+        result.value = "";
+        err.innerText = "";
+    };
+    const ex = () => {
+        if (confirm("Are you sure you want to exit?") === true) {
+            setTimeout(() => {
+                window.close();
+            }, 300);
+        }
+    };
+    function add() {
+        let a = parseFloat(numA.value);
+        let b = parseFloat(numB.value);
+        if(isNaN(a)||isNaN(b)){
+            result.value='Error';
+        }else{
+            let c = a + b;
+            result.value = c;
+        }
+
+    }
+    function sub() {
+        let a = parseFloat(numA.value);
+        let b = parseFloat(numB.value);
+        if(isNaN(a)||isNaN(b)){
+            result.value='Error';
+        }else{
+            let c = a - b;
+            result.value = c;
+        }
+    }
+    function mut() {
+        let a = parseFloat(numA.value);
+        let b = parseFloat(numB.value);
+        if(isNaN(a)||isNaN(b)){
+            result.value='Error';
+        }else{
+            let c = a * b;
+            result.value = c;
+        }
+    }
+    function div() {
+        let a = parseFloat(numA.value);
+        let b = parseFloat(numB.value);
+        if(isNaN(a)||isNaN(b)){
+            result.value='Error';
+        }else{
+            if(b==0){
+                result.value='b is not valid';
+            }else{
+                let c = (a / b).toFixed(4);
+                result.value = c;
+            }
+        }
+    }
+</script>
+<!--<script src="./finisher-header.es5.min.js" type="text/javascript"></script>-->
+<script type="text/javascript">
+    new FinisherHeader ({
+        "count": 32,
+        "size": {
+            "min": 1,
+            "max": 445,
+            "pulse": 0
+        },
+        "speed": {
+            "x": {
+                "min": 0,
+                "max": 0.4
+            },
+            "y": {
+                "min": 0,
+                "max": 0.1
+            }
+        },
+        "colors": {
+            "background": "#9EDCFF",
+            "particles": [
+                "#ffffff",
+                "#88deff",
+                "#908dff",
+                "#46ffcd",
+                "#f886ff",
+                "#fffd88"
+            ]
+        },
+        "blending": "screen",
+        "opacity": {
+            "center": 0,
+            "edge": 0.7
+        },
+        "skew": 0,
+        "shapes": [
+            "c",
+            "s",
+            "t"
+        ]
+    });
+</script>
+</body>
+</html>

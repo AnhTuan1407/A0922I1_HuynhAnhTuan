@@ -28,3 +28,12 @@ CREATE INDEX composite ON product(product_name, product_price);
 -- Sử dụng câu lệnh EXPLAIN để biết được câu lệnh SQL của bạn thực thi như nào
 EXPLAIN SELECT * FROM product WHERE product_name = 'Dieu Hoa'; 
 
+create unique index idx_product 
+on product (product_code);
+alter table product add index idx_products(product_name, product_price);
+explain select *from product;
+
+create view product_view as 
+select product_code, product_name, product_price, product_status from product;
+select *from product_view;
+

@@ -109,6 +109,7 @@ select * from subject join mark on subject.subId = mark.subid
 where mark = (select max(mark) from mark);
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
-select s.studentid, s.studentname, s.address, s.phone, avg(m.mark) from student s
-join mark m on s.studentid = m.studentid
-group by m.studentid;
+select s.studentID, s.studentName, s.address, s.phone, s.status, avg(m.mark)
+from student s join mark m on s.studentID = m.studentID
+group by studentID, studentName
+order by m.mark desc;
