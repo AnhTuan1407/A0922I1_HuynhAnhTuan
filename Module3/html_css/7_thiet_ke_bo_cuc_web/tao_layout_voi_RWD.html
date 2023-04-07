@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo layout với RWD</title>
+</head>
+<body>
+<style>
+    .container {
+        font-family: Arial;
+        font-size: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header {
+        height: 50px;
+        width: 100%;
+        background-color: #333333;
+        position: fixed;
+        margin: 0;
+        top: 0;
+    }
+
+    .header ul, .header li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header li {
+        position: relative;
+        display: inline;
+        list-style: none;
+    }
+
+    .header li a {
+        width: 75px;
+        height: 50px;
+        text-decoration: none;
+        color: white;
+        line-height: 50px;
+        padding: 15px 15px;
+    }
+
+    .header a:hover {
+        background-color: black;
+    }
+
+    .header .login {
+        float: right;
+    }
+
+    .left {
+        position: fixed;
+        width: 16.77%;
+        min-height: 700px;
+        background-color: #e4e4e4;
+        margin-top: 42px;
+    }
+
+    .left ul li {
+        padding: 0;
+        margin: 0;
+    }
+
+    .left li {
+        list-style: none;
+    }
+
+    .left li a {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        height: 50px;
+        width: 100px;
+        margin: 40px 30px;
+    }
+
+    .left a:hover {
+        background-color: #9e9e9e;
+    }
+
+    .content {
+        width: 66.67%;
+        min-height: 1000px;
+        float: left;
+        background-color: #f5f5f5;
+        margin-top: 30px;
+        margin-left: 17%;
+    }
+
+    .right {
+        width: 16.67%;
+        min-height: 700px;
+        background-color: #e4e4e4;
+        margin: 42px 83%;
+        position: fixed;
+    }
+
+    .right ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .right li {
+        list-style: none;
+    }
+
+    .right li a {
+        text-align: center;
+        display: block;
+        width: 175px;
+        height: 100px;
+        text-decoration: none;
+        background-color: #dccbed;
+        border: 1px solid white;
+    }
+
+    .footer {
+        height: 50px;
+        width: 100%;
+        background-color: #333333;
+        clear: both;
+    }
+
+    .footer p{
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+    <div class="header">
+        <ul>
+            <li><a href="">Logo</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <li class="head1"><a href="">Contact</a></li>
+            <li class="login"><a href="">Login</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="left">
+            <ul>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Welcome</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam aut eaque, eveniet fuga iure,
+                libero nobis nostrum numquam porro quos ratione rerum voluptatem. Beatae blanditiis culpa, distinctio
+                doloremque et eum ipsum libero minus nihil nostrum, numquam, perspiciatis quas suscipit ut vel. Aliquid
+                deserunt facere, in laboriosam laborum magnam sint.
+            </p>
+            <hr>
+            <h1>Test</h1>
+            <p>
+                Lorem ipsum...
+            </p>
+        </div>
+
+        <div class="right">
+            <ul><li><a href="">ADS</a></li></ul>
+            <ul><li><a href="">ADS</a></li></ul>
+        </div>
+    </main>
+
+    <div class="footer">
+            <p>Footer Text</p>
+        </div>
+</div>
+
+
+</body>
+</html>

@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8babe9f6-e21f-44bb-8c61-006c033a9a84" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Module3/html_css/6_CSS_Cascading Style Stylesheet/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/html_css/6_CSS_Cascading Style Stylesheet/Bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/html_css/7_thiet_ke_bo_cuc_web/FacebookBasic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/html_css/7_thiet_ke_bo_cuc_web/FacebookBasic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/html_css/7_thiet_ke_bo_cuc_web/demo.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,7 @@
       <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson15_exception_debug" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.FuramaController">
     <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="furama_project.controllers.FuramaController" />
       <module name="Module2" />
@@ -199,6 +200,8 @@
       <workItem from="1677837828128" duration="5635000" />
       <workItem from="1679618247883" duration="2232000" />
       <workItem from="1679984189856" duration="5177000" />
+      <workItem from="1680683500675" duration="2000" />
+      <workItem from="1680872201928" duration="697000" />
     </task>
     <servers />
   </component>
