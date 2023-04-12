@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Bai1
+
+        // let a=[
+        //     [1, 2, 1, 24],
+        //     [8, 11, 9, 4],
+        //     [7, 0, 7, 27],
+        //     [7, 4, 28, 14],
+        //     [3, 10, 26, 7]
+        //      ]
+        // for(let i=0; i<a.length;i++){
+        //     document.write("Row "+i+"<br>");
+        //     for(let j=0; j<a[i].length; j++){
+        //         document.writeln(a[i][j].toString()+"<br>");
+        //         console.log("i"+i);
+        //         console.log("j"+j)
+        //     }
+        // }
+
+        // Bai2
+        //
+        // let array=[ 'c', 's', 'c', '2', '6', '1' ]
+        // document.writeln(array.reverse().toString());
+
+    //    Bai3
+    //     let input=prompt("Nhap vao chuoi ky tu:");
+        //     let str=input.toString();
+        //     let array=[str[0]];
+        //     let count=0;
+        //         for (let i = 0; i <=str.length; i++) {
+        //             array.push(str[i]);
+        //           if(array[i]>=0 && array[i]<=9){
+        //                 count++;
+        //           }
+        //     }
+        //     document.write("So ky tu dem duoc la: "+count.toString());
+
+    //    Bai4
+    //     let input = prompt("Nhap vao chuoi ky tu:");
+    //     let str = input.toString();
+    //     let array = [str[0]];
+    //     let count = 0;
+    //     for (let i = 0; i <= str.length; i++) {
+    //         array.push(str[i]);
+    //     }
+    //     if (array[0] !== ' ')
+    //         count = 1;
+    //     for (let j = 0; j < array.length - 1; j++) {
+    //         if (array[j] === ' ' && array[j + 1] !== ' ')
+    //             count++;
+    //     }
+    //     document.write("So tu trong chuoi"+count.toString())
+
+    //    Bai5
+    //     let count=0;
+    //     let input1 = prompt("Nhap vao chuoi ky tu1:");
+    //     let str1 = input1.toString();
+    //     let array1 = [str1[0]];
+    //     for (let i = 0; i <= str1.length; i++) {
+    //         array1.push(str1[i]);
+    //     }
+    //     let input2 = prompt("Nhap vao chuoi ky tu2:");
+    //     let str2 = input2.toString();
+    //     let array2 = [str2[0]];
+    //     for (let j = 0; j <= str2.length; j++) {
+    //         array2.push(str2[j]);
+    //     }
+    //     for(let a=0;a<array1.length;a++)
+    //     {
+    //         if(array1[i]===array2[j])
+    //         {
+    //             count++;
+    //         }
+    //     }
+    //     if(count===array1.length){
+    //         document.write("hai mang giong nhau ");
+    //     }
+    //     else
+    //         document.write("hai mang khac nhau ");
+
+    //    Bai6
+            let input= prompt("Nhap vao chuoi ky tu1:");
+            let str = input.toString();
+            let array = [str[0]];
+            for (let i = 1; i <str.length; i++) {
+                array.push(str[i]);
+            }
+        for(let i=0; i<array.length;i++)
+        {
+            if(array[i]==="-")
+            {
+                array[i]="_";
+            }
+        }
+        document.write(array.join(''));
+
+    </script>
+</body>
+</html>

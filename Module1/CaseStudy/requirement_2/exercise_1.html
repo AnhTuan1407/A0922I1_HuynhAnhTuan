@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+</body>
+<script>
+    let grossSalary ;
+    do{
+        grossSalary = prompt("Input your gross salary:");
+        if(!isNaN(Number(grossSalary)) && Number(grossSalary) > 0 && Number.isInteger(parseFloat(grossSalary))){
+            grossSalary = parseFloat(grossSalary);
+            break;
+        }
+    }while (true);
+    let taxOfSalaryOver15Million = 20;
+    let taxOfSalary7to15Million = 10;
+    let taxOfSalaryUnder7Million = 5;
+    let tax = "";
+    let netSalary = 0;
+    if(grossSalary > 15000000){
+        netSalary = grossSalary - (grossSalary * taxOfSalaryOver15Million) / 100;
+        tax = taxOfSalaryOver15Million + "%";
+    }else if(7000000 <= grossSalary && grossSalary <= 15000000){
+        netSalary = grossSalary - (grossSalary * taxOfSalary7to15Million) / 100;
+        tax = taxOfSalary7to15Million + "%";
+    }else if (grossSalary < 7000000) {
+        netSalary = grossSalary - (grossSalary * taxOfSalaryUnder7Million) / 100;
+        tax = taxOfSalaryUnder7Million + "%";
+    }
+    alert("Gross salary: " + grossSalary +  " VND\nTax: " + tax + "\nNet salary: " + netSalary + " VND");
+
+</script>
+</html>

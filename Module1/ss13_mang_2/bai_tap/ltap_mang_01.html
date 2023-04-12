@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // // Bai1
+        // let array=[3,8,33,44,23,56,9,64,34,89];
+        // let count=0;
+        // for(let i=0;i<array.length;i++){
+        //     if(array[i]>=10) {
+        //         document.writeln(array[i].toString()+"<br>");
+        //         count++;
+        //
+        //     }
+        // }
+        // document.writeln("Tong cac so lon hon 10:"+"<br>"+count)
+
+        // Bai2
+        let array=[2,56,53,6,4,73,86,8,5,34];
+        let max=array[0];
+        let index=0;
+        for(let i=0; i<array.length; i++){
+            if(array[i]>max){
+                max=array[i];
+                index=i;
+            }
+        }
+        document.writeln("max="+max + " index="+index);
+
+        // // Bai3
+        // let medium=0;
+        // let count=0;
+        // let input=parseInt(prompt("Nhap vao so nguyen:"))
+        // let str=input.toString();
+        // let array=[str[0]];
+        // for(let i=1; i<str.length; i++){
+        //     array.push(str[i]);
+        // }
+        // for(let i=0; i<array.length; i++){
+        //     var max=array[0];
+        //     if(array[i]>max){
+        //         max=array[i];
+        //     }
+        //     medium+=array[i];
+        //     count++;
+        // }
+        // medium/=count;
+        // document.writeln("Max= " +max.toString());
+        // document.writeln("Medium= " +medium.toString());
+
+        // // Bai4
+       //  let input=[prompt("Nhap vao so nguyen:")];
+       //  let str=input.toString();
+       //  let array=[str[0]]
+       //  for (let i=1; i<str.length; i++){
+       //      array.push(str[i]);
+       //  }
+       // document.writeln(array.reverse().toString());
+
+
+    //    Bai5
+    //     let array=[-1,-3,-5,-4,24,5,6,7,-9,-11];
+    //     let count=0;
+    //     for(let i=0; i<array.length; i++){
+    //         if(array[i]<0){
+    //             count++;
+    //         }
+    //     }
+    //     document.write(count.toString());
+
+    //    Bai 6
+    //     let arrayV=[1,4,5,6,7,9,88,66,33,35,62,46];
+    //     let input=parseInt(prompt("Nhap vao so nguyen"));
+    //     for(let i=0; i<arrayV.length; i++){
+    //         if(input===arrayV[i]){
+    //             alert("V is in the array.");
+    //             break;
+    //         }else{
+    //             alert("V not is in the array");
+    //             break;
+    //         }
+    //     }
+
+    // //    Bai7!!!
+    //     let arrayV=[23,4,5,63,73,765,457,43,775,74];
+    //     document.write("Mang ban dau: "+arrayV.join(','));
+    //     let input=parseInt(prompt("Nhap vao so nguyen:"));
+    //     for(let i=0; i<arrayV.length; i++){
+    //         if(input===arrayV[i]) {
+    //             arrayV[i]=arrayV[arrayV.length-1]=0;
+    //             arrayV[i] = arrayV[i + 1];
+    //         }
+    //     }
+    //     document.write("<br>"+"Mang sau khi xoa:"+arrayV.join(','));
+
+    //    Bai8
+    //     let input=parseInt(prompt("nhap vao day so nguyen"));
+    //     let str=input.toString();
+    //     let array=[str[0]];
+    //     for(let i=1; i<str.length; i++){
+    //         array.push(str[i]);
+    //     }
+    //     let tmp;
+    //     for(let i=0; i<array.length-1; i++ ){
+    //         for(let j=i+1; j<array.length; j++){
+    //             if(array[i]<array[j]){
+    //                 tmp=array[i];
+    //                 array[i]=array[j];
+    //                 array[j]=tmp;
+    //             }
+    //         }
+    //     }
+    //     document.writeln(array.toString());
+
+    //    Bai9
+    //     let input1=parseInt(prompt("Nhap vao phan tu mang 1:"));
+    //     let input2=parseInt(prompt("Nhap vao phan tu mang 2:"));
+    //     let array3=[];
+    //     let str1=input1.toString();
+    //     let str2=input2.toString();
+    //     let array1=[str1[0]];
+    //     let array2=[str2[0]];
+    //     for(let a=1; a<str1.length; a++){
+    //         array1.push(str1[a]);
+    //     }
+    //     for (let k=1; k<str2.length; k++){
+    //
+    //         array2.push(str2[k]);
+    //     }
+    //     array3=[array1.concat(array2)];
+    //         document.writeln(array3.toString());
+
+    </script>
+</body>
+</html>

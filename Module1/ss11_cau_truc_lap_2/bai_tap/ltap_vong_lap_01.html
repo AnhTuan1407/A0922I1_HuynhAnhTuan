@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--&lt;!&ndash;    Bai1&ndash;&gt;-->
+<!--    <script>-->
+<!--        let i;-->
+<!--        for(i=1; i<100; i++){-->
+<!--            document.write(" "+i+)-->
+<!--            if(i===99) {-->
+<!--                document.write("Da hoan thanh.")-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!--&lt;!&ndash;    Bai2&ndash;&gt;-->
+<!--        <script>-->
+<!--            let temperature=parseFloat(prompt("Nhap vao nhiet do: "));-->
+<!--            while(temperature>=100){-->
+<!--                let reduce=parseFloat(prompt("Nhap vao nhiet do can giam:"));-->
+<!--                temperature-=reduce;-->
+<!--                document.write("Nhiet do da giam la: "+temperature+"<br>");-->
+<!--            }-->
+<!--            while (temperature<=20){-->
+<!--                let rise=parseFloat(prompt("Nhap vao nhiet do can tang:"));-->
+<!--                temperature+=rise;-->
+<!--                document.write("Nhiet do da tang la: "+temperature+"<br>")-->
+<!--            }-->
+<!--            if(temperature>20&&temperature<100){-->
+<!--                document.write("Nhiet do hien tai la: "+temperature);-->
+<!--            }-->
+<!--        </script>-->
+
+<!--&lt;!&ndash;    Bai3&ndash;&gt;-->
+<!--        <script>-->
+<!--      let n1=0;-->
+<!--      let n2=1;-->
+<!--      let nextTerm=n1+n2;-->
+<!--      let count=0;-->
+<!--      while (count<18){-->
+<!--          document.write(" "+nextTerm);-->
+<!--          n1=n2;-->
+<!--          n2=nextTerm;-->
+<!--          nextTerm=n1+n2;-->
+<!--          count++;-->
+<!--      }-->
+<!--        </script>-->
+
+<!--&lt;!&ndash;    Bai4&ndash;&gt;-->
+<!--    <script>-->
+<!--        let n1=0;-->
+<!--        let n2=1;-->
+<!--        let n3=n1+n2;-->
+<!--        for (i=0;i<100; i++){-->
+<!--            if(n3%5===0){-->
+<!--                document.write(" "+n3);-->
+<!--                break;-->
+<!--            }-->
+<!--            n1=n2;-->
+<!--            n2=n3;-->
+<!--            n3=n1+n2;-->
+<!--        }-->
+<!--    </script>-->
+
+<!--    Bai5-->
+<!--    <script>-->
+<!--        let n1=0;-->
+<!--        let n2=1;-->
+<!--        let n3=n1+n2;-->
+<!--        let sum=1;-->
+<!--        for(i=0; i<18; i++) {-->
+<!--            sum+=n3;-->
+<!--            n1 = n2;-->
+<!--            n2 = n3;-->
+<!--            n3 = n1 + n2;-->
+<!--        }-->
+<!--        document.write(sum);-->
+<!--    </script>-->
+
+<!--Bai6-->
+<!--    <script>-->
+<!--        let i=1;-->
+<!--        let count=0;-->
+<!--        let sum=0;-->
+<!--        while (count<30){-->
+<!--            if(i%7===0){-->
+<!--                sum+=i;-->
+<!--                count++;-->
+<!--            }i++;-->
+<!--        }document.write("Tong cac so chia het cho 7 la:"+sum);-->
+<!--    </script>-->
+
+<!--&lt;!&ndash;Bai7&ndash;&gt;-->
+<!--    <script>-->
+<!--        for(i=1; i<=100; i++){-->
+<!--            if(i%3===0&&i%5===0){-->
+<!--                document.write(" FizzBuzz "+"<br>");-->
+<!--            }else if(i%3===0){-->
+<!--                document.write(" Fizz "+"<br>");-->
+<!--            }else if(i%5===0){-->
+<!--                document.write(" Buzz "+"<br>");-->
+<!--            }else {-->
+<!--                document.write(" "+i+"<br>");-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bai 8-->
+<form>
+    <style>
+        table{
+            margin-left: 500px;
+            font-size: 20px;
+            color: steelblue;
+        }
+        .fo{
+            border: blue;
+            background-color: salmon;
+            color: #dddddd;
+            width: 400px;
+            height: 400px;
+            font-size: 100px;
+        }
+    </style>
+    <table>
+        <tr>
+            <th><h1>Game không biết đoán số</h1></th>
+        </tr>
+        <tr>
+        <td >
+            <input class="fo" type="button" value="Chơi" onclick="number()">
+        </td>
+        </tr>
+    </table>
+</form>
+<script src="bai8.js"></script>
+</body>
+</html>

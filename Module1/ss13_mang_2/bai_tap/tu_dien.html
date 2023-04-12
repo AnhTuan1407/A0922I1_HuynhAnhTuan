@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="valuetext">
+        <input type="button" id="btdich" value="Dịch" onclick="tudien">
+        <p id="result"></p>
+    </form>
+    <script>
+        function tudien() {
+            let vie = ['mèo', 'chó', 'cá mập', 'heo'];
+            let eng = ['cat', 'dog', 'shark', 'pig'];
+            let value = document.getElementById('valuetext').value;
+            let tmp;
+            let result;
+            for (let i = 0; i < eng.length; i++) {
+                if (value === eng[i]) {
+                    tmp = i;
+                }
+            }
+            for (let j = 0; j < vie.length; j++) {
+                if (tmp === j) {
+                    result = vie[j];
+                }
+            }
+            document.getElementById('result').innerHTML = value;
+        }
+
+
+    </script>
+</body>
+</html>

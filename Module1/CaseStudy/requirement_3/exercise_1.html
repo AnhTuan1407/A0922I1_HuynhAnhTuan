@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+</body>
+<script>
+    let arrayInt = [];
+    let arrayPrefixSum = [];
+    let totalElement;
+    do {
+        totalElement = prompt("Input total element of array:");
+        if (!isNaN(Number(totalElement)) && Number(totalElement) > 0 && Number.isInteger(parseFloat(totalElement))) {
+            totalElement = parseInt(totalElement);
+            break;
+        }
+    } while (true);
+
+    let num;
+    do {
+        num = prompt("Input number");
+        if (!isNaN(Number(num)) && Number(num) > 0 && Number.isInteger(parseFloat(num))) {
+            num = parseInt(num);
+            arrayInt.push(num);
+            totalElement--;
+        }
+    } while (totalElement !== 0);
+
+    let temp = 0;
+    for (let i = 0; i < arrayInt.length; i++) {
+        temp += arrayInt[i];
+        arrayPrefixSum.push(temp);
+    }
+    alert("Initialization array: " + arrayInt + "\nPrefix sum array: " + arrayPrefixSum);
+</script>
+</html>

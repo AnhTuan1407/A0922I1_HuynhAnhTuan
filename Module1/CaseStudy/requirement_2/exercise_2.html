@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+</body>
+<script>
+    let character = "";
+    do {
+        character = prompt("Input a character :");
+        if (character.length === 1) {
+            break;
+        }
+    } while (true);
+    let tempCharacter = character.toLowerCase();
+    switch (tempCharacter) {
+        case 'o':
+        case 'u':
+        case 'i':
+        case 'a':
+        case 'e':
+            alert(character + ' is vowel');
+            break;
+        default:
+            alert(character + " is consonant");
+    }
+
+</script>
+</html>

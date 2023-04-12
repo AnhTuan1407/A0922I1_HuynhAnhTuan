@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1>Bong Den</h1>
+    <img src="denoff.jpg"id="lamp">
+    <br>
+    <input type="button" value="TurnOnOrOff" onclick="buttonSwitch()">
+    <p id="text"></p>
+</div>
+    <script>
+        class SwitchButton {
+            constructor(status) {
+                this.status= status;
+            }
+            TurnOnOrOffSwitch()
+            {
+                if(this.status)
+                {
+                    this.status=false;
+                }else
+                {
+                    this.status= true;
+                }
+            }
+        }
+        class ElectricLamp
+        {
+            constructor(SwitchButton) {
+                this.SwitchButton= SwitchButton;
+            }
+            TurnOnOrOffLight()
+            {
+                if(this.SwitchButton.status)
+                {
+                    document.getElementById("lamp").src="denon.jpg";
+                    document.getElementById("text").innerText="Bong den da bat";
+                }
+                else
+                {
+                    document.getElementById("lamp").src="denoff.jpg";
+                    document.getElementById("text").innerText="Bong den da tat";
+                }
+            }
+
+        }
+        let button= new SwitchButton(false);
+        let lamp= new ElectricLamp(button);
+        function buttonSwitch() {
+            button.TurnOnOrOffSwitch();
+            lamp.TurnOnOrOffLight();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+</body>
+<script>
+    let sizeArray;
+    let numerators = [];
+    let denominators = [];
+    let numerator;
+    let denominator;
+    let maxIndex = 0;
+    let maxValue = 0;
+    do {
+        sizeArray = prompt("Nhập độ dài mảng phân số:");
+        if (!isNaN(Number(sizeArray)) && Number(sizeArray) > 0 && Number.isInteger(parseFloat(sizeArray))) {
+            sizeArray = parseInt(sizeArray);
+            break;
+        }
+    } while (true);
+
+
+    for (let i = 0; i < sizeArray; i++) {
+        do {
+            numerator = prompt("Nhập tử số:");
+            if (!isNaN(Number(numerator)) && Number.isInteger(parseFloat(numerator))) {
+                numerator = parseInt(numerator);
+                numerators.push(numerator);
+                break;
+            }
+        } while (true);
+
+        do {
+            denominator = prompt("Nhập mẫu số:");
+            if (!isNaN(Number(denominator)) && Number.isInteger(parseFloat(denominator)) && Number(denominator) !== 0) {
+                denominator = parseInt(denominator);
+                denominators.push(denominator);
+                break;
+            }
+        } while (true);
+
+        if (numerators[i] / denominators[i] > maxValue) {
+            maxValue = numerators[i] / denominators[i];
+            maxIndex = i;
+        }
+    }
+
+    alert("Mảng tử số: " + numerators + "\nMảng mẫu số :" + denominators + "\nChỉ số có phân số lớn nhất: " + maxIndex);
+
+
+</script>
+</html>

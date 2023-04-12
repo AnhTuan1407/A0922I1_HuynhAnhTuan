@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button type="button" onclick="doSth()">Click me</button>
+<button type="button" onclick="said">Click</button>
+<script>
+    class Apple{
+        constructor(weightA) {
+            this.weightA=weightA;
+        }
+        getWeightA(){
+            return this.weightA;
+        }
+        decrease(){
+            this.weightA=this.weightA-1;
+        }
+    }
+    class Human{
+        constructor(name, gender, weightH) {
+            this.name=name;
+            this.gender=gender;
+            this.weightH=weightH;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(new_name){
+            this.name=new_name;
+        }
+        getWeightH(){
+            return this.weightH;
+        }
+        setWeightH(new_wightH){
+            this.weightH=new_wightH;
+        }
+        getGender(){
+            return this.gender;
+        }
+        checkApple(apple){
+            return apple.getWeightA() > 0;
+        }   
+        eat(apple){
+            if(this.checkApple(apple)){
+                this.weightH++;
+                apple.decrease();
+                document.write("So tao con lai la:"+apple.getWeightA()+"<br>"+"So can nang hien tai: "+this.weightH+"<br>");
+            }
+        }
+        say(){
+            document.write("thom ngon");
+        }
+    }
+    function doSth(){
+        let apple=new Apple(10);
+        let name = prompt("Nhap ten: ")
+        let gender = prompt("Nhap gioi tinh: ")
+        let weightH = +prompt("Nhap khoi luong: ");
+        let human= new Human(name,gender,weightH);
+        human.eat(apple);
+        document.write("Ten: "+name+"Gioi tinh: "+gender+"Can nang ban dau: "+weightH);
+    }
+    function said() {
+        let human=new Human();
+        human.say();
+    }
+</script>
+</body>
+</html>

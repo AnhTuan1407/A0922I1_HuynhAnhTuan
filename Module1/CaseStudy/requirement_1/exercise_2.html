@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+</body>
+<script>
+    let height;
+    do {
+        height = prompt("Input height");
+        if(!isNaN(Number(height)) && Number(height) > 0 && Number.isInteger(parseFloat(height))){
+            height = parseInt(height);
+            break;
+        }
+    }while (true);
+    let shape = "";
+    for (let i = 1; i <= height; i++){
+        for (let j = 1 ; j <= height; j++){
+            if (i === height){
+                shape += "*";
+            }else if (j === 1 || j === i){
+                shape += "*";
+            }else {
+                shape += "&ensp;";
+            }
+        }
+        shape += "<br>"
+    }
+    document.write(shape)
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4</title>
+</head>
+<body>
+</body>
+<script>
+    let arrayString = ["Không", "Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín"];
+    let number;
+    let stringOfNumber = "";
+    do {
+        number = prompt("Input number:");
+        if (!isNaN(Number(number)) && Number(number) > 0 && Number.isInteger(parseFloat(number))) {
+            break;
+        }
+    } while (true);
+    for (let i = 0; i < number.length; i++) {
+        stringOfNumber += arrayString[number[i]] + " ";
+    }
+    alert("Number: " + number + "\nNumber ( by string ): " + stringOfNumber);
+</script>
+</html>

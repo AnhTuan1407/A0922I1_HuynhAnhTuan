@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Bai1
+        // let myColor=["Red","Green", "White", "Black"];
+        // document.writeln(myColor.toString());
+
+        //Bai2
+        // let numbers=parseInt(prompt("Enter Numbers:"));
+        // let str=numbers.toString();
+        // let result=[str[0]];
+        // for(let i=1; i<str.length; i++){
+        //     if((str[i-1]%2===0) && (str[i]%2===0)){
+        //         result.push('-',str[i]);
+        //     }else{
+        //         result.push(str[i]);
+        //     }
+        // }document.write(result.join(' '));
+
+    //    Bai3
+        str = 'c';
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for(let i=0; i<str.length; i++){
+            if(UPPER.indexOf(str[i]) !== -1)
+            {
+                result.push(str[i].toLowerCase());
+            }
+            else if(LOWER.indexOf(str[i]) !== -1)
+            {
+                result.push(str[i].toUpperCase());
+            }
+            else
+            {
+                result.push(str[i]);
+            }
+        }
+        document.writeln(result.join(''));
+    </script>
+</body>
+</html>

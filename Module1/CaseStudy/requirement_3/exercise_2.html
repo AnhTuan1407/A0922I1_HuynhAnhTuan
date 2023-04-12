@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+</body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    let totalElementOfArrayA;
+    let totalElementOfArrayB;
+    let num;
+    do {
+        totalElementOfArrayA = prompt("Input total element of array A:");
+        if (!isNaN(Number(totalElementOfArrayA)) && Number(totalElementOfArrayA) > 0 && Number.isInteger(parseFloat(totalElementOfArrayA))) {
+            totalElementOfArrayA = parseInt(totalElementOfArrayA);
+            break;
+        }
+    } while (true);
+
+    do {
+        num = prompt("Input number of array A");
+        if (!isNaN(Number(num)) && Number(num) > 0 && Number.isInteger(parseFloat(num))) {
+            num = parseInt(num);
+            arrayA.push(num);
+            totalElementOfArrayA--;
+        }
+    } while (totalElementOfArrayA !== 0);
+
+    do {
+        totalElementOfArrayB = prompt("Input total element of array B:");
+        if (!isNaN(Number(totalElementOfArrayB)) && Number(totalElementOfArrayB) > 0 && Number.isInteger(parseFloat(totalElementOfArrayB))) {
+            totalElementOfArrayB = parseInt(totalElementOfArrayB);
+            break;
+        }
+    } while (true);
+
+    do {
+        num = prompt("Input number of array B");
+        if (!isNaN(Number(num)) && Number(num) > 0 && Number.isInteger(parseFloat(num))) {
+            num = parseInt(num);
+            arrayB.push(num);
+            totalElementOfArrayB--;
+        }
+    } while (totalElementOfArrayB !== 0);
+
+    let missingValues = [];
+    for (let i = 0; i < arrayB.length; i++) {
+        if (arrayA.indexOf(arrayB[i]) === -1 && missingValues.indexOf(arrayB[i])) {
+            missingValues.push(arrayB[i])
+        }
+    }
+    alert("Array A: " + arrayA + "\nArray B: " + arrayB +"\nMissing value between array A and array B:\n" + missingValues);
+</script>
+</html>
