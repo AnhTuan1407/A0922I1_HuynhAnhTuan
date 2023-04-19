@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8babe9f6-e21f-44bb-8c61-006c033a9a84" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Module3/html_css/7_thiet_ke_bo_cuc_web/FacebookBasic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/html_css/7_thiet_ke_bo_cuc_web/FacebookBasic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/html_css/7_thiet_ke_bo_cuc_web/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/build/libs/demo-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/java_web/ss11_MVC_model/practice/demo/build/libs/demo-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/Chill/A0922I1_HuynhAnhTuan/Module2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.file-colors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Chill/A0922I1_HuynhAnhTuan/Module2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src" />
@@ -61,7 +66,7 @@
       <recent name="C:\Users\PC\Desktop\Chill\A0922I1_HuynhAnhTuan\Module2\src\lesson15_exception_debug" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FuramaController">
+  <component name="RunManager">
     <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="furama_project.controllers.FuramaController" />
       <module name="Module2" />
@@ -202,6 +207,7 @@
       <workItem from="1679984189856" duration="5177000" />
       <workItem from="1680683500675" duration="2000" />
       <workItem from="1680872201928" duration="697000" />
+      <workItem from="1681312377968" duration="85000" />
     </task>
     <servers />
   </component>
