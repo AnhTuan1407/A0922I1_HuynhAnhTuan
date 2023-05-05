@@ -17,3 +17,5 @@ insert into users(name, age, gender, email, address) values ('Akali', 35, 0, 'ak
 insert into users(name, age, gender, email, address) values ('Pyke', 35, 0, 'pyke@gmail.com', 'Quang Nam');
 insert into users(name, age, gender, email, address) values ('Viego', 35, 0, 'viego@gmail.com', 'Hai Phong');
 insert into users(name, age, gender, email, address) values ('Darius', 35, 0, 'darius@gmail.com', 'Yen Bai');
+
+select * from users;

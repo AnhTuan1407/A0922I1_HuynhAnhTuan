@@ -121,7 +121,6 @@ public class StudentServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
-
         Student student = new Student(id, name, email, country);
         iStudentService.update(student);
         response.sendRedirect("/students");
