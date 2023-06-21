@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<table th:object="${product}">
+    <tr>
+        <th>ID</th>
+        <td>
+            <input type="text" th:field="*{id}">
+        </td>
+    </tr>
+
+    <tr>
+        <th>Name</th>
+        <td>
+            <input type="text" th:field="*{name}">
+        </td>
+    </tr>
+
+    <tr>
+        <th>Category</th>
+        <td>
+            <select th:field="*{category.categoryId}">
+                <option th:each="c: ${categories}" th:value="${c.categoryId}" th:text="*{category.categoryName}"
+                        th:selected="${product.category.categoryId == c.categoryId}"></option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Price</th>
+        <td>
+            <input type="text" th:field="*{price}">
+        </td>
+    </tr>
+
+    <tr>
+        <th>Date Release</th>
+        <td>
+            <input type="text" th:field="*{dateRelease}">
+        </td>
+    </tr>
+
+    <tr>
+        <th>Quantity</th>
+        <td>
+            <input type="text" th:field="*{quantity}">
+        </td>
+    </tr>
+</table>
+<a th:text="|Back to list|" th:href="@{/product/list}"></a>
+</body>
+</html>

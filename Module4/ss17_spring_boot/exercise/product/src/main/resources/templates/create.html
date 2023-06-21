@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new product</title>
+</head>
+<body>
+<h1>Create new product</h1>
+<form th:action="@{/product/create}" th:object="${product}" method="post">
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td><input type="text" th:field="*{nameProduct}">
+                <span th:if="${#fields.hasErrors('nameProduct')}" th:errors="*{nameProduct}"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Category:</th>
+            <td><select th:field="*{category.id}">
+                <option th:each="c : ${category}" th:value="${c.id}" th:text="${c.categoryName}"></option>
+            </select>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Price:</th>
+            <td><input type="text" th:field="*{price}">
+                <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Quantity:</th>
+            <td><input type="text" th:field="*{quantity}">
+                <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Date release:</th>
+            <td><input type="date" th:field="*{dateRelease}" th:value="${#dates.format(product.dateRelease, 'yyyy-MM-dd')}"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Create"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
