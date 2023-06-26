@@ -1,0 +1,138 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="~{template/template::header('List blog')}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:replace="~{template/template::pageloader}"></div>-->
+<!--<nav th:replace="~{template/template::navbar}"></nav>-->
+<!--<section th:replace="~{block/layout::sidebar}"></section>-->
+
+<!--<section class="content">-->
+<!--    <div class="container-fluid">-->
+<!--        &lt;!&ndash; Vertical Layout &ndash;&gt;-->
+<!--        <div class="row clearfix">-->
+<!--            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+<!--                <div class="card">-->
+<!--                    <div class="header">-->
+<!--                        <h2>-->
+<!--                            Blog list-->
+<!--                        </h2>-->
+<!--                    </div>-->
+<!--                    <div class="body table-responsive">-->
+<!--                        <a th:href="@{/blog/create}" class="btn btn-primary btn-custom">-->
+<!--                            <i class="fa fa-plus-circle" aria-hidden="true"></i> Add new blog-->
+<!--                        </a>-->
+<!--                        <table class="table table-striped" id="dataTable-ss6_blog">-->
+<!--                            <thead>-->
+<!--                            <tr>-->
+<!--                                <th>ID</th>-->
+<!--                                <th>Blog name</th>-->
+<!--                                <th>Blog genre</th>-->
+<!--                                <th>Title</th>-->
+<!--                                <th>Content</th>-->
+<!--                                <th>View</th>-->
+<!--                                <th>Update</th>-->
+<!--                                <th>Delete</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody th:each="b, iterStat: ${blog}">-->
+<!--                            <tr th:object="${b}">-->
+<!--                                <td th:text="*{id}"></td>-->
+<!--                                <td th:text="*{name}"></td>-->
+<!--                                <td th:text="*{blogGenre}"></td>-->
+<!--                                <td th:text="*{title}"></td>-->
+<!--                                <td th:text="*{content}"></td>-->
+<!--                                <td>-->
+<!--                                    <a th:href="@{/student/view(id=(*{id}))}">View</a>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <a th:href="@{/student/update(id=(*{id}))}">Update</a>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <a th:href="@{/student/delete(id=(*{id}))}">Delete</a>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<div th:replace="~{template/template::script}"></div>-->
+<!--<div th:replace="~{template/template::footer}"></div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>My Blog</h1>
+<a th:href="@{/blog/create}">Create Blog</a>
+<form th:action="@{/blog/search}" method="get">
+    Search by content:
+    <input name="search" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Blog name</th>
+        <th>Blog genre</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>View</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody th:each="b : ${blog}" th:object="${b}">
+    <tr>
+        <td th:text="*{id}"></td>
+        <td th:text="*{name}"></td>
+        <td th:text="*{blogGenre}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{content}"></td>
+        <td>
+            <a th:href="@{/blog/view(id=*{id})}">View</a>
+        </td>
+        <td>
+            <a th:href="@{/blog/update(id=*{id})}">Update</a>
+        </td>
+        <td>
+            <a th:href="@{/blog/delete(id=*{id})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <span>
+        <a th:if="${blog.hasPrevious()}" th:href="@{/blog/listpaging(page = ${blog.number - 1})}">Previous</a>
+    </span>
+    <span th:each="pageNo: ${#numbers.sequence(0,blog.totalPages - 1)}">
+        <a th:href="@{/blog/listpaging(page = ${pageNo})}" th:text="${pageNo}"></a>
+    </span>
+    <span>
+        <a th:if="${blog.hasNext()}" th:href="@{/blog/listpaging(page = ${blog.number +1})}">Next</a>
+    </span>
+</div>
+
+<!--<div >-->
+<!--    <a th:if="${page.hasPrevious()}" th:href="@{/listpagingslice(size=${page.size}, page=${page.getNumber()})}"-->
+<!--       th:text="${page.getNumber()}"></a>-->
+<!--    <a th:if="${page.hasNext() || page.hasPrevious()}" th:href="@{/listpagingslice(size=${page.size}, page=${page.getNumber() + 1})}"-->
+<!--       th:text="${page.getNumber() + 1}"></a>-->
+<!--    <a th:if="${page.hasNext()}" th:href="@{/listpagingslice(size=${page.size}, page=${page.getNumber() + 2})}"-->
+<!--       th:text="${page.getNumber() + 2}"></a>-->
+<!--</div>-->
+
+</body>
+</html>

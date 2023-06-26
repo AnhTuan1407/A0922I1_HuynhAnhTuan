@@ -32,7 +32,7 @@ public class StudentController {
     @GetMapping(value = "/list"
 //        consumes = {MediaType.APPLICATION_JSON_VALUE}
 //            ,headers = {"Content-Type=text/html","Accept=application/xml"}
-            )
+    )
     public String list(Model model) {
         List<Student> students = service.findAll();
         model.addAttribute("students", students);
@@ -98,7 +98,7 @@ public class StudentController {
     @PostMapping("/create2")
     public String create2(@RequestParam("id") String id,
                           @RequestParam("name") String name
-                          ,RedirectAttributes redirectAttributes
+            , RedirectAttributes redirectAttributes
     ) {
         Student student = new Student(id, name);
         service.create(student);
@@ -109,7 +109,7 @@ public class StudentController {
 
     @GetMapping(value = "/listpaging")
     public String listpaging(Model model, @RequestParam("page") Optional<Integer> page,
-                                 @RequestParam("size") Optional<Integer> size,
+                             @RequestParam("size") Optional<Integer> size,
                              @RequestParam("sort") Optional<String> sort) {
         int currentPage = page.orElse(1);
         int pageSize = size.orElse(5);
@@ -127,9 +127,9 @@ public class StudentController {
         return "student/listPaging";
     }
 
-    @GetMapping(value = "/listpagingslice")
+        @GetMapping(value = "/listpagingslice")
     public String listpagingslice(Model model, @RequestParam("page") Optional<Integer> page,
-                             @RequestParam("size") Optional<Integer> size) {
+                                  @RequestParam("size") Optional<Integer> size) {
         int currentPage = page.orElse(1);
         int pageSize = size.orElse(5);
         Slice<Student> students = service.findAllWithSlice(PageRequest.of(currentPage - 1, pageSize));

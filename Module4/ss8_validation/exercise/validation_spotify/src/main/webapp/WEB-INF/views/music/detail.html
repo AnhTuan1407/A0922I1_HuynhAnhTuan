@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h1>Detail</h1>
+    <table th:object="${music}">
+        <tr>
+            <th>Tên bài hát: </th>
+            <td th:text="*{name}"></td>
+        </tr>
+
+        <tr>
+            <th>Nghệ sĩ thể hiện: </th>
+            <td th:text="*{singer}"></td>
+        </tr>
+
+        <tr>
+            <th>Thể loại nhạc: </th>
+            <td th:text="*{kindOfMusic}"></td>
+        </tr>
+
+        <tr>
+            <th>Link: </th>
+            <td th:text="*{link}"></td>
+        </tr>
+    </table>
+</body>
+</html>

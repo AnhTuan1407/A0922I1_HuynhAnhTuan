@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+</head>
+<body>
+<table th:object="${register}">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Phone number</th>
+        <th>Email</th>
+    </tr>
+
+    <tr>
+        <td th:text="*{firstName}"></td>
+        <td th:text="*{lastName}"></td>
+        <td th:text="*{age}"></td>
+        <td th:text="*{phoneNumber}"></td>
+        <td th:text="*{email}"></td>
+    </tr>
+</table>
+</body>
+</html>

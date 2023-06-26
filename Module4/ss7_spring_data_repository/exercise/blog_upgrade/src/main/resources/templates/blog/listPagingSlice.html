@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>My Blog</h1>
+<a th:href="@{/blog/create}">Create Blog</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Blog name</th>
+        <th>Blog genre</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>View</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody th:each="b : ${blog}" th:object="${b}">
+    <tr>
+        <td th:text="*{id}"></td>
+        <td th:text="*{name}"></td>
+        <td th:text="*{blogGenre}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{content}"></td>
+        <td>
+            <a th:href="@{/student/view(id=(*{id}))}">View</a>
+        </td>
+        <td>
+            <a th:href="@{/student/update(id=(*{id}))}">Update</a>
+        </td>
+        <td>
+            <a th:href="@{/student/delete(id=(*{id}))}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div >
+    <a th:if="${page.hasPrevious()}" th:href="@{/blog/listpagingslice(size=${page.size}, page=${page.getNumber()})}"
+       th:text="${page.getNumber()}"></a>
+    <a th:if="${page.hasNext() || page.hasPrevious()}" th:href="@{/blog/listpagingslice(size=${page.size}, page=${page.getNumber() + 1})}"
+       th:text="${page.getNumber() + 1}"></a>
+    <a th:if="${page.hasNext()}" th:href="@{/blog/listpagingslice(size=${page.size}, page=${page.getNumber() + 2})}"
+       th:text="${page.getNumber() + 2}"></a>
+</div>
+
+</body>
+</html>
