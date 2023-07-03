@@ -1,12 +1,19 @@
 package codegym.vn.controller;
 
+import codegym.vn.entity.Book;
+import codegym.vn.entity.BorrowBook;
 import codegym.vn.service.IBookService;
 import codegym.vn.service.IBorrowBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/library")
@@ -22,4 +29,36 @@ public class BookController {
         model.addAttribute("book", iBookService.findAll());
         return "library/listBook";
     }
+
+    @GetMapping("/listuser")
+    public String showListUser(Model model){
+        model.addAttribute("borrowBook", iBorrowBookService.findAll());
+        return "library/listUser";
+    }
+
+    @GetMapping("/borrow")
+    public String showBorrowForm(@RequestParam("id") Integer id, Model model) throws ParseException {
+        BorrowBook borrowBook = new BorrowBook();
+        borrowBook.setUserId((int) (10000 + Math.random()*9999));
+        LocalDateTime today = LocalDateTime.now();
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(String.valueOf(today));
+        borrowBook.setBorrowedDate(date);
+        model.addAttribute("books", iBookService.findById(id));
+        borrowBook.setBook(iBookService.findById(id));
+        model.addAttribute("borrowBook", borrowBook);
+        return "library/borrow";
+    }
+
+    @PostMapping("/borrow")
+    public String doBorrow(@ModelAttribute("borrowBook") BorrowBook borrowBook){
+        Book book = iBookService.findById(borrowBook.getBook().getId());
+        if (book.getQuantity() > 0){
+            book.setQuantity(book.getQuantity() - 1);
+        }
+        borrowBook.setBook(book);
+        iBorrowBookService.create(borrowBook);
+        return "redirect:/library/listuser";
+    }
+
+
 }

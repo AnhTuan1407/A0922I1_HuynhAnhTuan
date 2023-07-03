@@ -22,7 +22,7 @@ public class BorrowBookServiceImpl implements IBorrowBookService {
 
     @Override
     public boolean create(BorrowBook borrowBook) {
-        if (iBorrowBookRepository.existsById(borrowBook.getUserId())){
+        if (iBorrowBookRepository.existsById(borrowBook.getUserId()) || ((borrowBook.getBook().getQuantity()) <= 0)){
             return false;
         }
         iBorrowBookRepository.save(borrowBook);

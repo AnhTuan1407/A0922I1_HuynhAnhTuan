@@ -1,5 +1,6 @@
 package codegym.vn.entity;
 
+import net.bytebuddy.implementation.bind.annotation.Default;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -27,7 +28,7 @@ public class BorrowBook {
     private Book book;
 
     @Column(name = "status")
-    private boolean status;
+    private boolean status = false;
 
     public boolean isStatus() {
         return status;
