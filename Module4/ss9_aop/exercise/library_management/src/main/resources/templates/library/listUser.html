@@ -22,7 +22,7 @@
         <td th:text="${#dates.format(b.borrowedDate, 'dd/MM/yyyy')}"></td>
         <td th:text="${b.payDay}"></td>
         <td th:if="${b.status}">Đã trả</td>
-        <td th:if="${!b.status}">Đang mượn</td>
+        <td th:if="${!b.status}">Đang mượn || <a th:href="@{/library/pay(userId=*{b.userId})}">Pay</a></td>
     </tr>
 </table>
 </body>

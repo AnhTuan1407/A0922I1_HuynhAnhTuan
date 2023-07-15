@@ -7,6 +7,7 @@ import codegym.vn.service.IBorrowBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -25,13 +26,13 @@ public class BookController {
     private IBookService iBookService;
 
     @GetMapping("/listbook")
-    public String showListBook(Model model){
+    public String showListBook(Model model) {
         model.addAttribute("book", iBookService.findAll());
         return "library/listBook";
     }
 
     @GetMapping("/listuser")
-    public String showListUser(Model model){
+    public String showListUser(Model model) {
         model.addAttribute("borrowBook", iBorrowBookService.findAll());
         return "library/listUser";
     }
@@ -39,7 +40,7 @@ public class BookController {
     @GetMapping("/borrow")
     public String showBorrowForm(@RequestParam("id") Integer id, Model model) throws ParseException {
         BorrowBook borrowBook = new BorrowBook();
-        borrowBook.setUserId((int) (10000 + Math.random()*9999));
+        borrowBook.setUserId((int) (10000 + Math.random() * 9999));
         LocalDateTime today = LocalDateTime.now();
         Date date = new SimpleDateFormat("yyyy-MM-dd").parse(String.valueOf(today));
         borrowBook.setBorrowedDate(date);
@@ -50,15 +51,37 @@ public class BookController {
     }
 
     @PostMapping("/borrow")
-    public String doBorrow(@ModelAttribute("borrowBook") BorrowBook borrowBook){
-        Book book = iBookService.findById(borrowBook.getBook().getId());
-        if (book.getQuantity() > 0){
-            book.setQuantity(book.getQuantity() - 1);
+    public String doBorrow(@ModelAttribute("borrowBook") BorrowBook borrowBook, BindingResult bindingResult) {
+        new BorrowBook().validate(borrowBook, bindingResult);
+        if (bindingResult.hasErrors()){
+            return "library/borrow";
+        }else {
+            Book book = iBookService.findById(borrowBook.getBook().getId());
+            if (book.getQuantity() > 0) {
+                book.setQuantity(book.getQuantity() - 1);
+            }
+            borrowBook.setBook(book);
+            iBorrowBookService.create(borrowBook);
+            return "redirect:/library/listuser";
         }
-        borrowBook.setBook(book);
-        iBorrowBookService.create(borrowBook);
-        return "redirect:/library/listuser";
     }
 
+    @GetMapping("/pay")
+    public String showPay(@RequestParam("userId") Integer userId, Model model) {
+        BorrowBook borrowBook = iBorrowBookService.findById(userId);
+        model.addAttribute("user", borrowBook);
+        model.addAttribute("books", iBookService.findById(borrowBook.getBook().getId()));
+        return "/library/pay";
+    }
 
+    @PostMapping("/pay")
+    public String doPay(@ModelAttribute("borrowBook") BorrowBook borrowBook) throws ParseException {
+        LocalDateTime today = LocalDateTime.now();
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(String.valueOf(today));
+        borrowBook.setPayDay(date);
+        borrowBook.setStatus(true);
+        borrowBook.getBook().setQuantity(borrowBook.getBook().getQuantity() + 1);
+        iBorrowBookService.update(borrowBook);
+        return "redirect:/library/listuser";
+    }
 }

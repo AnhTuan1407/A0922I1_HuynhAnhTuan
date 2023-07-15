@@ -2,12 +2,15 @@ package codegym.vn.entity;
 
 import net.bytebuddy.implementation.bind.annotation.Default;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class BorrowBook {
+public class BorrowBook implements Validator {
     @Id
     @Column(name = "user_id")
     private Integer userId;
@@ -96,5 +99,28 @@ public class BorrowBook {
         this.payDay = payDay;
         this.book = book;
         this.status = status;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        BorrowBook borrowBook = (BorrowBook) target;
+        userName = borrowBook.getUserName();
+        String[] specialCharacters = {"@", ";", ".", "=", "-", "+"};
+
+        ValidationUtils.rejectIfEmpty(errors, "userName", "userName.empty", null, "Không được để trống!");
+        if (userName.length() > 100) {
+            errors.rejectValue("userName", "userName.length", null, "Tên quá dài!");
+        }
+        for (int i = 0; i < specialCharacters.length; i++) {
+            if (userName.contains(specialCharacters[i])){
+                errors.rejectValue("userName", "userName.specialCharacter", null, "Không được chứa ký tự đặc biệt!");
+                break;
+            }
+        }
     }
 }

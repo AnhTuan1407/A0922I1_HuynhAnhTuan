@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<a class="btn btn-primary" th:href="@{/product/create}" role="button">Add new product</a>
+<form th:action="@{/product/search}" method="get">
+    Search by product name:
+    <input name="search" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Date Release</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="p : ${products}" th:object="${p}">
+        <th scope="row" th:text="*{productId}"></th>
+        <td th:text="*{productName}"></td>
+        <td th:text="*{category.categoryName}"></td>
+        <td th:text="*{price}"></td>
+        <td th:text="*{quantity}"></td>
+        <td th:text="*{#dates.format(dateRelease, 'dd/MM/yyyy')}"></td>
+
+        <td>
+            <a class="btn btn-primary" th:href="@{/product/detail/(id=*{productId})}" role="button">Detail</a>
+            |
+            <a class="btn btn-primary" th:href="@{/product/update/(id=*{productId})}" role="button">Update</a>
+            |
+            <a class="btn btn-danger" th:href="@{/product/delete/(id=*{productId})}" role="button"
+               data-toggle="modal"
+               data-target="#exampleModal">Delete</a>
+
+            <a th:href="@{/product/delete/(id=*{productId})}">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="color: red">
+                                Are u sure about that?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!--<table class="table table-striped">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th scope="col">#</th>-->
+<!--        <th scope="col">First</th>-->
+<!--        <th scope="col">Last</th>-->
+<!--        <th scope="col">Handle</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--        <th scope="row">1</th>-->
+<!--        <td>Mark</td>-->
+<!--        <td>Otto</td>-->
+<!--        <td>@mdo</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th scope="row">2</th>-->
+<!--        <td>Jacob</td>-->
+<!--        <td>Thornton</td>-->
+<!--        <td>@fat</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th scope="row">3</th>-->
+<!--        <td>Larry</td>-->
+<!--        <td>the Bird</td>-->
+<!--        <td>@twitter</td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

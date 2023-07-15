@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58e730ce-2380-482d-bcbe-4a58581bee31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss17_spring_boot/demo/springboot_paging/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/pay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise/library_management/src/main/resources/validation-message.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/library_management/src/main/java/codegym/vn/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/library_management/src/main/java/codegym/vn/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/library_management/src/main/java/codegym/vn/entity/BorrowBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/library_management/src/main/java/codegym/vn/entity/BorrowBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/borrow.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/borrow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/listBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/listBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/listUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/library_management/src/main/resources/templates/library/listUser.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2SNXMctAaE8QmWyEV0XgFJJwJmA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Chill/A0922I1_HuynhAnhTuan/Module4/ss9_aop/exercise/library_management"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58e730ce-2380-482d-bcbe-4a58581bee31" name="Changes" comment="" />
+      <created>1688987966028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688987966028</updated>
+      <workItem from="1688987967400" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
