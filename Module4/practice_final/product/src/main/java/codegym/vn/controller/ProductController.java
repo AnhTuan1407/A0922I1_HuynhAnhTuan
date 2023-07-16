@@ -48,7 +48,7 @@ public class ProductController {
             return "/product/create";
         }
         productService.create(product);
-        return "redirect:/product/list";
+        return "redirect:/product/listPaging";
     }
 
     @GetMapping("/update")
