@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div style="background-color: ghostwhite">
+    <p style="font-weight: bold">Quản lý sản phẩm</p>
+    <a class="btn btn-primary" th:href="@{/product/create}" role="button" style="float: right">Thêm mới sản phẩm</a>
+</div>
+<p style="font-weight: bold">Tìm kiếm sản phẩm</p>
+<div>
+    <p>Tên sản phẩm</p>
+    <form th:action="@{/product/search}" method="get">
+        <input name="search" type="text" placeholder="Nhập tên sản phẩm"/>
+        <input type="submit" value="Search"/>
+    </form>
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Chọn</th>
+        <th scope="col">Tên sản phẩm</th>
+        <th scope="col">Giá bắt đầu</th>
+        <th scope="col">Loại sản phẩm</th>
+        <th scope="col">Tình trạng</th>
+        <th scope="col">Hành động</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="p : ${products}" th:object="${p}">
+        <th scope="row" th:text="*{productId}"></th>
+        <th>Chọn</th>
+        <td th:text="*{productName}"></td>
+        <td th:text="*{price}"></td>
+        <td th:text="*{category.categoryName}"></td>
+        <td th:text="*{status}"></td>
+        <td>
+            <a class="btn btn-primary" th:href="@{/product/detail/(id=*{productId})}" role="button">Detail</a>
+            |
+            <a class="btn btn-primary" th:href="@{/product/update/(id=*{productId})}" role="button">Update</a>
+            |
+            <a th:onclick="showDeleteModal([[*{productId}]], [[*{productName}]])" class="btn btn-danger" type="button"
+               data-toggle="modal"
+               data-target="#exampleModal">Delete</a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Delete product</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="color: red">
+                            Delete: <span id="showId" style="color: blue"></span>
+                            <br>
+                            Are u sure about that?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <form th:action="@{/product/delete}">
+                                <input type="hidden" name="id" id="productId">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <span>
+        <a th:if="${products.hasPrevious()}" th:href="@{/product/listPaging(page = ${products.number - 1})}"
+           class="btn btn-primary" role="button">Previous</a>
+    </span>
+    <span th:each="pageNo: ${#numbers.sequence(0,products.totalPages - 1)}">
+        <a th:href="@{/product/listPaging(page = ${pageNo})}" th:text="${pageNo}" class="btn btn-primary"
+           role="button"></a>
+    </span>
+    <span>
+        <a th:if="${products.hasNext()}" th:href="@{/product/listPaging(page = ${products.number +1})}"
+           class="btn btn-primary" role="button">Next</a>
+    </span>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script>
+    function showDeleteModal(productId, productName) {
+        document.getElementById('showId').innerText = productName;
+        document.getElementById('productId').value = productId;
+    }
+</script>
+</body>
+</html>

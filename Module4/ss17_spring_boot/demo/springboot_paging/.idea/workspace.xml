@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65b572a0-fb85-483d-9a00-fb84191ef7f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/resources/templates/library/pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/java/codegym/vn/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/java/codegym/vn/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/resources/templates/library/listBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/resources/templates/library/listBook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/resources/templates/library/listUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop/exercise/library_management/src/main/resources/templates/library/listUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/java/codegym/vn/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/resources/templates/product/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/resources/templates/product/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/resources/templates/product/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/resources/templates/product/listPaging.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../final_test/final/src/main/resources/templates/product/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_form_data_binding/demo/demoForm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4_form_data_binding/demo/demoForm/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +39,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Chill/A0922I1_HuynhAnhTuan/Module4/ss17_spring_boot/demo/springboot_paging",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Chill/A0922I1_HuynhAnhTuan/Module4/ss17_spring_boot/demo/springboot_paging&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,6 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1688471133781</updated>
       <workItem from="1688471135054" duration="77000" />
+      <workItem from="1689600920442" duration="6000" />
+      <workItem from="1689600985584" duration="2000" />
     </task>
     <servers />
   </component>
