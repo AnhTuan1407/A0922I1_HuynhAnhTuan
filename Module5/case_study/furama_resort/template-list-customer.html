@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List Customer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/furama_css.css">
+</head>
+<style>
+    body {
+        margin-top: 20px;
+        background: #eee;
+    }
+
+    .body-content .container {
+        max-width: 1200px;
+    }
+
+    .card {
+        box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    }
+
+    .avatar.sm {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: .818125rem;
+    }
+
+    .table-nowrap .table td, .table-nowrap .table th {
+        white-space: nowrap;
+    }
+
+    .table > :not(caption) > * > * {
+        padding: 0.75rem 1.25rem;
+        border-bottom-width: 1px;
+    }
+
+    table th {
+        font-weight: 600;
+        background-color: #eeecfd !important;
+    }
+</style>
+<body>
+
+<!--Header-->
+<!--Header-->
+<div class="header">
+    <div class="header-topline">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    Thời tiết: 30 °C / 86 °F
+                </div>
+                <div class="col-sm">
+                    Giờ địa phương: 07:4 pm
+                </div>
+                <div class="col-sm">
+
+                </div>
+                <div class="col-sm" style="text-align: center">
+                    EN VI JA KR RU CN
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div>
+                        <img src="img/logo@2x.png" alt="Không tải được ảnh!" class="furama-logo">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <a href="https://www.tripadvisor.com/Hotel_Review-g298085-d302750-Reviews-Furama_Resort_Danang-Da_Nang.html"
+                       style="text-decoration: none">
+                        <div class="widget-tripadvisor">
+                            <div class="inside">
+                                <div class="widget-tripadvisor-logo">
+                                    <img src="img/widget-tripadvisor-logo.png" alt="Không tải được ảnh!">
+                                </div>
+                                <div class="widget-tripadvisor-rating">
+                                    <img src="img/widget-tripadvisor-rating.png" alt="Không tải được ảnh!">
+                                </div>
+                                <div class="widget-tripadvisor-text">
+                                    2,746 Reviews
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    103 – 105 Đường Võ Nguyên Giáp, Phường Khuê Mỹ, Quận Ngũ hành Sơn, Tp.
+                    Đà Nẵng, Việt Nam
+                    7.0 km từ Sân bay Quốc tế Đà Nẵng
+                </div>
+                <div class="col-sm">
+                    84-236-3847 333/888
+                    reservation@furamavietnam.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-nav">
+        <div class="container">
+            <ul id="menu-furama">
+                <li><a href="">GIỚI THIỆU</a></li>
+                <li><a href="">LOẠI PHÒNG</a></li>
+                <li><a href="">ẨM THỰC</a></li>
+                <li><a href="">HỘI NGHỊ VÀ SỰ KIỆN</a></li>
+                <li><a href="">SPA</a></li>
+                <li><a href="">GIẢI TRÍ</a></li>
+                <li><a href="">ĐIỂM ĐẾN</a></li>
+                <li><a href="">ƯU ĐÃI</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="body-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-3 mb-lg-5">
+                <div class="overflow-hidden card table-nowrap table-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">List customers</h5>
+                        <a href="#!" class="btn btn-light btn-sm">View All</a>
+                    </div>
+
+                    <!-- Form search -->
+                    <hr>
+                    <form class="form-inline my-2 my-lg-0" action="#">
+                        <div class="input-group">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên khách hàng"
+                                   aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <i class="fas fa-search"></i> Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead class="small text-uppercase bg-body text-muted">
+                            <tr>
+                                <th>Mã khách</th>
+                                <th>Tên</th>
+                                <th>Loại khách</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Ngày sinh</th>
+                                <th>Số chứng minh nhân dân</th>
+                                <th>Quốc tịch</th>
+                                <th>Ngày tạo</th>
+                                <th class="text-end">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="align-middle">
+                                <td>1</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                             class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1">Mark Voldov</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>VIP</td>
+                                <td>0895623***</td>
+                                <td>mvoges@email.com</td>
+                                <td>14/07/2003</td>
+                                <td><span>****6231</span></td>
+                                <td><span class="d-inline-block align-middle">Russia</span></td>
+                                <td>21 Sep, 2021</td>
+
+                                <!--Action dropdown-->
+                                <td class="text-end">
+                                    <div class="dropdown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="fa fa-bars" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" style="">
+                                            <a href="#!" class="dropdown-item">View Details</a>
+                                            <a href="#!" class="dropdown-item">Delete user</a>
+                                            <a href="#!" class="dropdown-item">Update user</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="align-middle">
+                                <td>1</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                             class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1">Mark Voldov</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>VIP</td>
+                                <td>0895623***</td>
+                                <td>mvoges@email.com</td>
+                                <td>14/07/2003</td>
+                                <td><span>****6231</span></td>
+                                <td><span class="d-inline-block align-middle">Russia</span></td>
+                                <td>21 Sep, 2021</td>
+
+                                <!--Action dropdown-->
+                                <td class="text-end">
+                                    <div class="dropdown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="fa fa-bars" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" style="">
+                                            <a href="#!" class="dropdown-item">View Details</a>
+                                            <a href="#!" class="dropdown-item">Delete user</a>
+                                            <a href="#!" class="dropdown-item">Update user</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="align-middle">
+                                <td>1</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                             class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1">Mark Voldov</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>VIP</td>
+                                <td>0895623***</td>
+                                <td>mvoges@email.com</td>
+                                <td>14/07/2003</td>
+                                <td><span>****6231</span></td>
+                                <td><span class="d-inline-block align-middle">Russia</span></td>
+                                <td>21 Sep, 2021</td>
+
+                                <!--Action dropdown-->
+                                <td class="text-end">
+                                    <div class="dropdown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="fa fa-bars" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" style="">
+                                            <a href="#!" class="dropdown-item">View Details</a>
+                                            <a href="#!" class="dropdown-item">Delete user</a>
+                                            <a href="#!" class="dropdown-item">Update user</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="align-middle">
+                                <td>1</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                             class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1">Mark Voldov</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>VIP</td>
+                                <td>0895623***</td>
+                                <td>mvoges@email.com</td>
+                                <td>14/07/2003</td>
+                                <td><span>****6231</span></td>
+                                <td><span class="d-inline-block align-middle">Russia</span></td>
+                                <td>21 Sep, 2021</td>
+
+                                <!--Action dropdown-->
+                                <td class="text-end">
+                                    <div class="dropdown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="fa fa-bars" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" style="">
+                                            <a href="#!" class="dropdown-item">View Details</a>
+                                            <a href="#!" class="dropdown-item">Delete user</a>
+                                            <a href="#!" class="dropdown-item">Update user</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="align-middle">
+                                <td>1</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                             class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1">Mark Voldov</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>VIP</td>
+                                <td>0895623***</td>
+                                <td>mvoges@email.com</td>
+                                <td>14/07/2003</td>
+                                <td><span>****6231</span></td>
+                                <td><span class="d-inline-block align-middle">Russia</span></td>
+                                <td>21 Sep, 2021</td>
+
+                                <!--Action dropdown-->
+                                <td class="text-end">
+                                    <div class="dropdown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="fa fa-bars" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" style="">
+                                            <a href="#!" class="dropdown-item">View Details</a>
+                                            <a href="#!" class="dropdown-item">Delete user</a>
+                                            <a href="#!" class="dropdown-item">Update user</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <div>
+                            <!-- Pagination -->
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <!-- Add dynamic pagination here using JavaScript -->
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <!-- Add more page numbers here -->
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Footer-->
+<!--Footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="col-1">
+                    <h2>Hướng Dẫn Di Chuyển</h2>
+                    <div>
+                        <p>Khu nghỉ dưỡng Furama là cơ sở hàng đầu để khám phá một trong những điểm đến hấp dẫn nhất
+                            Châu Á. Chỉ cách Đà Nẵng một quãng lái xe ngắn là bốn Di sản Văn hóa Thế giới được UNESCO
+                            công nhận:</p>
+                        <a href="" class="map">Xem trên bản đồ</a>
+                    </div>
+                    <h4>Địa Điểm</h4>
+                    <p>1. Cố đô Huế................2 tiếng</p>
+                    <p>2. Phố cổ Hội An............30 phút</p>
+                    <p>3. Thánh địa Mỹ Sơn.........90 phút</p>
+                    <p>4. Động Phong Nha...........3 tiếng</p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="footer-li">
+                    <ul>
+                        <li><a href="">Giá Công Bố</a></li>
+                        <li><a href="">Lifestyle Blog</a></li>
+                        <li><a href="">Tuyển Dụng</a></li>
+                        <li><a href="">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-ariyana">
+                    <img src="img/Ariyana-Tourism-Complex-02-500x131.png" alt="">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div>
+                    <h4>Liên hệ</h4>
+                    <p>
+                        103 - 105 Vo Nguyen Giap Street, Khue My Ward, Ngu Hanh Son District, Danang City, Vietnam
+                        Tel.: 84-236-3847 333/888 * Fax: 84-236-3847 666
+                        Email: reservation@furamavietnam.com * www.furamavietnam.com GDS Codes: Amadeus-GD DADFUR,
+                        Galileo/Apollo-GD 16236, Sabre-GD 032771, Worldspan- GD DADFU
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</html>
