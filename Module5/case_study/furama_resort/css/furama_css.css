@@ -79,3 +79,8 @@
     width: 500px;
     height: 131px;
 }
+
+.header-nav .dropdown {
+    position: relative;
+    margin-bottom: 20px;
+}
