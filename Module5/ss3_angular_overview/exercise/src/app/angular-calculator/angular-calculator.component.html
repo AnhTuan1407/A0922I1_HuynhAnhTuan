@@ -1,0 +1,21 @@
+<h2>Calculator</h2>
+<form>
+
+    <label for="firstNumber" class="form-label">First number</label>
+    <input type="number" class="form-control" id="firstNumber" [(ngModel)]="firstNumber"
+           name="firstNumber">
+
+    <label for="secondNumber" class="form-label">Second number</label>
+    <input type="number" class="form-control" id="secondNumber" [(ngModel)]="secondNumber" name="secondNumber">
+
+
+  <select name="option" #cal>
+    <option value="add">Summation(+)</option>
+    <option value="sub">Subtraction(-)</option>
+    <option value="mul">Multiplication(X)</option>
+    <option value="div">Division(/)</option>
+  </select>
+  <input type="submit" (click)="calculation(cal.value)">
+</form>
+
+<h2>Kết quả: {{result}}</h2>
