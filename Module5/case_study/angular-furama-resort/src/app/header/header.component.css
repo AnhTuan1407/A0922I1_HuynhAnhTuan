@@ -1,0 +1,86 @@
+.header .header-nav {
+  position: sticky;
+}
+
+.header .header-topline .container {
+  width: 1200px;
+  height: 42.1px;
+}
+
+.header .header-topline .container .row {
+  margin-top: 10px;
+}
+
+.header .header-content .container .row .furama-logo {
+  width: 63px;
+  height: 99px;
+}
+
+.header .header-nav .container #menu-furama li {
+  float: left;
+  display: inline-block;
+  list-style: none;
+}
+
+.header .header-nav {
+  background-color: #046056;
+  width: 100%;
+  height: 70px;
+}
+
+.header .header-nav li {
+  text-decoration: none;
+  margin: 20px 15px;
+}
+
+.header .header-nav li a {
+  color: white;
+}
+
+/*.body .container {*/
+/*  max-width: 1200px;*/
+/*  height: 1000px;*/
+/*  background-image: url(https://furamavietnam.com/wp-content/uploads/2019/07/Vietnam_Danang_Furama_Resort_Exterior_Ocean-Pool-6.jpg);"*/
+/*}*/
+
+.footer{
+  width: 100%;
+  height: 550px;
+  background-color: #20c997;
+  float: bottom;
+}
+
+.footer .col-1 {
+  max-width: 100%;
+  height: 548px;
+  background-color: white;
+}
+
+.footer .map {
+  max-width: 300px;
+  height: 52px;
+  background-color: #046056;
+}
+
+.footer .footer-li {
+  margin: 40px;
+}
+
+.footer .footer-li li{
+  margin: 20px;
+}
+
+.footer .footer-li li a{
+  margin: 20px;
+  color: black;
+}
+
+.footer .footer-ariyana img{
+  width: 500px;
+  height: 131px;
+}
+
+.header-nav .dropdown {
+  position: relative;
+  margin-bottom: 20px;
+}
