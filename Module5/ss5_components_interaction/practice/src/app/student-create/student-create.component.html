@@ -1,0 +1,25 @@
+<div style="background-color: cornflowerblue">
+  <h1>CREATE</h1>
+</div>
+<div>
+  <label>Name</label>
+  <input type="text" #name>
+</div>
+
+<div>
+  <label>Gender</label>
+  <input type="radio" value="0" name="gender" #gender1>Female
+  <input type="radio" value="1" name="gender" #gender2>Male
+  <input type="radio" value="2" name="gender" #gender3>LGBT
+</div>
+
+<div>
+  <label>Point</label>
+  <input type="text" #point>
+</div>
+
+<button (click)="create(name.value,
+  gender1.checked ? gender1.value : gender2.checked ? gender2.value : gender3.value,
+  point.value)
+">Create</button>
+
