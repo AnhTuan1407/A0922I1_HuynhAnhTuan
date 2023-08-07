@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<div class="container">
+  <div class="title">
+    FORM REGISTER
+  </div>
+</div>
+
+<form class="px-4 py-3" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="abc@email.com" formControlName="email">
+
+    <div *ngIf="registerForm.get('email').invalid && registerForm.get('email')?.touched">
+      <small class="text-danger" *ngIf="registerForm.get('email').errors?.required">Không được để trống !</small>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="password">Mật khẩu</label>
+    <input type="password" class="form-control" id="password" placeholder="********" formControlName="password"
+           required minlength="6">
+
+    <div *ngIf="registerForm.get('password').invalid && registerForm.get('password')?.dirty">
+      <small class="text-danger" *ngIf="registerForm.get('password').errors?.required">Không được để trống!</small>
+      <small class="text-danger" *ngIf="registerForm.get('password').errors?.minlength">Tối thiểu 6 ký tự!</small>
+    </div>
+
+
+  </div>
+
+  <div class="form-group">
+    <label for="confirmPassword">Nhập lại mật khẩu</label>
+    <input type="password" class="form-control" id="confirmPassword" placeholder="********"
+           formControlName="confirmPassword" required minlength="6">
+
+    <div *ngIf="registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword')?.touched">
+      <small class="text-danger" *ngIf="registerForm.get('confirmPassword').errors?.required">Không được để
+        trống!</small>
+      <small class="text-danger" *ngIf="registerForm.get('confirmPassword').errors?.minlength">Tối thiểu 6 ký
+        tự!</small>
+      <small class="text-danger" *ngIf="registerForm.get('confirmPassword') != registerForm.get('password')">Khác so với mật
+        khẩu!</small>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="country">Quốc tịch</label>
+    <select class="form-control" id="country" name="country" formControlName="country" required>
+      <option value="">---Chọn---</option>
+      <option value="Việt Nam">Việt Nam</option>
+      <option value="Mỹ">Nhật Bản</option>
+      <option value="Đức">Hàn Quốc</option>
+      <option value="Italy">Trung Quốc</option>
+      <option value="Italy">Mỹ</option>
+    </select>
+
+    <div *ngIf="registerForm.get('country').invalid && registerForm.get('country')?.touched">
+      <small class="text-danger" *ngIf="registerForm.get('country').invalid">Không được để trống !</small>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="age">Tuổi</label>
+    <input type="number" class="form-control" id="age" formControlName="age" required>
+
+    <div *ngIf="registerForm.get('age').invalid && registerForm.get('age')?.touched">
+      <small class="text-danger" *ngIf="registerForm.get('age').errors?.required">Không được để trống !</small>
+      <small class="text-danger" *ngIf="registerForm.get('age').value<18 && !registerForm.get('age').errors?.required">Phải
+        lớn hơn 18 tuỏi</small>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label>Giới tính</label>
+    <div class="radio-group">
+      <div>
+        <input type="radio" id="genderMale" name="gender" value="Nam" formControlName="gender" required>
+        <label for="genderMale">Nam</label>
+      </div>
+      <div>
+        <input type="radio" id="genderFemale" name="gender" value="Nữ" formControlName="gender" required>
+        <label for="genderFemale">Nữ</label>
+      </div>
+      <div>
+        <input type="radio" id="genderOther" name="gender" value="Khác" formControlName="gender" required>
+        <label for="genderOther">Khác</label>
+      </div>
+    </div>
+
+    <div *ngIf="registerForm.get('gender').invalid ">
+      <small class="text-danger" *ngIf="registerForm.get('gender').invalid">Không được để trống!</small>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Số điện thoại</label>
+    <input type="text" class="form-control" id="phone" placeholder="+84123456789" formControlName="phone" required
+           pattern="^\+84\d{9,10}$">
+
+    <div *ngIf="registerForm.get('phone').invalid && registerForm.get('phone')?.touched">
+      <small class="text-danger" *ngIf="registerForm.get('phone').errors?.required">Không được để trống!</small>
+      <small class="text-danger" *ngIf="registerForm.get('phone').errors?.pattern">Số điện thoại không đúng định dạng
+        !</small>
+    </div>
+
+  </div>
+
+  <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary">Đăng ký</button>
+
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
