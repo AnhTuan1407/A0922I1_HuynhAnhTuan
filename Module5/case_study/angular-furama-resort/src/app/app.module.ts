@@ -11,6 +11,8 @@ import { CreateServiceComponent } from './create-service/create-service.componen
 import { ListCustomerComponent } from './list-customer/list-customer.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { CreateContractComponent } from './create-contract/create-contract.component';
+import { ListContractComponent } from './list-contract/list-contract.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CreateCustomerComponent } from './create-customer/create-customer.compo
     CreateServiceComponent,
     ListCustomerComponent,
     UpdateCustomerComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    CreateContractComponent,
+    ListContractComponent
   ],
   imports: [
     BrowserModule,

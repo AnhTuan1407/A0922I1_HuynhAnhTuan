@@ -208,6 +208,41 @@
                   </div>
                 </td>
               </tr>
+
+
+              <tr class="align-middle" *ngFor="let item of customers">
+                <td>{{item.customerId}}</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                         class="avatar sm rounded-pill me-3 flex-shrink-0" alt="Customer">
+                    <div>
+                      <div class="h6 mb-0 lh-1">{{item.customerName}}</div>
+                    </div>
+                  </div>
+                </td>
+                <td>{{item.customerType}}</td>
+                <td>{{item.customerPhone}}</td>
+                <td>{{item.customerEmail}}</td>
+                <td>{{item.customerBirthDay}}</td>
+                <td>{{item.customerIdentityCard}}</td>
+                <td><span class="d-inline-block align-middle">{{item.customerNationality}}</span></td>
+                <td>{{item.customerDayCreate}}</td>
+
+                <!--Action dropdown-->
+                <td class="text-end">
+                  <div class="dropdown">
+                    <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" style="">
+                      <a href="#!" class="dropdown-item">View Details</a>
+                      <a href="#!" class="dropdown-item">Delete user</a>
+                      <a href="#!" class="dropdown-item">Update user</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
               </tbody>
             </table>
           </div>

@@ -95,6 +95,17 @@
         </ul>
       </td>
     </tr>
+
+    <tr *ngFor="let item of services; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{item.serviceName}}</td>
+      <td>{{item.serviceArea}}</td>
+      <td>{{item.serviceFloor}}</td>
+      <td>{{item.serviceCapacity}}</td>
+      <td>{{item.serviceCost}}</td>
+      <td>{{item.serviceRentType}}</td>
+      <td>{{item.serviceStatus}}</td>
+    </tr>
     </tbody>
   </table>
 </div>
