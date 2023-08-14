@@ -1,0 +1,10 @@
+.studentList {
+  display: inline-block;
+  width: 800px;
+  height: auto;
+  border: solid 2px black;
+}
+
+.studentList h1 {
+  background-color: aqua;
+}

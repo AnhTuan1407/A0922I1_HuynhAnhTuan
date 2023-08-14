@@ -1,0 +1,17 @@
+<table class="table table-striped">
+  <thead>
+  <h1>DICTIONARY</h1>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Eng</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of words;let i = index;">
+    <th scope="row">{{i + 1}}</th>
+    <td>
+      <a [routerLink]="['/dictionary/detail', item.eng]">{{ item.eng }}</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

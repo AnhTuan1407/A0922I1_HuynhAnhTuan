@@ -1,0 +1,29 @@
+<div class="studentList">
+  <h1>Student List</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Class Name</th>
+      <th scope="col">Point</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of students; let i = index" (click)="showDetail(item)">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.className}}</td>
+      <td>{{item.point}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.address}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-detail [inputStudent]="studentDetail"></app-detail>
+

@@ -1,0 +1,11 @@
+.studentDetail {
+  margin-left: 70px;
+  display: inline-block;
+  width: 600px;
+  height: auto;
+  border: solid 2px black;
+}
+
+.studentDetail h1 {
+  background-color: aqua;
+}
