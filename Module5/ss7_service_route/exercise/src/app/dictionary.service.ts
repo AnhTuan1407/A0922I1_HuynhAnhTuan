@@ -15,7 +15,6 @@ export class DictionaryService {
 
   constructor() {
   }
-
   getWord(): Dictionary[] {
     return this.words;
   }

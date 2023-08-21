@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ProductListComponent} from './product/product-list/product-list.component';
-import {ProductCreateComponent} from './product/product-create/product-create.component';
-import {ProductEditComponent} from './product/product-update/product-edit.component';
-import {ProductDeleteComponent} from './product/product-delete/product-delete.component';
+import {ProductListComponent} from './product-list/product-list.component';
+import {ProductCreateComponent} from './product-create/product-create.component';
+import {ProductUpdateComponent} from './product-update/product-update.component';
+import {ProductDeleteComponent} from './product-delete/product-delete.component';
 
 
 const routes: Routes = [{
@@ -14,7 +14,7 @@ const routes: Routes = [{
   component: ProductCreateComponent
 }, {
   path: 'product/edit/:id',
-  component: ProductEditComponent
+  component: ProductUpdateComponent
 }, {
   path: 'product/delete/:id',
   component: ProductDeleteComponent

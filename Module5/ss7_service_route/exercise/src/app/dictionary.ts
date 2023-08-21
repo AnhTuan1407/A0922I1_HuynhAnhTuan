@@ -1,4 +1,4 @@
 export interface Dictionary {
-  eng: string;
-  vie: string;
+  eng?: string;
+  vie?: string;
 }
