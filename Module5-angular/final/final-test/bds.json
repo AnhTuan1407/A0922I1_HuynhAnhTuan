@@ -1,0 +1,237 @@
+{
+  "bds": [
+    {
+      "danhMuc": "ádasdasd",
+      "vungMien": {
+        "id": 1,
+        "name": "Hà Nội"
+      },
+      "vaiTro": {
+        "id": 1,
+        "name": "Cá nhân"
+      },
+      "mucDich": {
+        "id": 3,
+        "name": "Cho thuê"
+      },
+      "tinhTrang": {
+        "id": 1,
+        "name": "Mới"
+      },
+      "diaChi": "ádasdasd",
+      "dienTich": "3434",
+      "huong": {
+        "id": 2,
+        "huong": "Tây"
+      },
+      "tuaDe": "ádasdasd",
+      "noiDung": "ádasdasdasdas",
+      "gia": "1231231233232",
+      "ngayDang": "2023-08-06",
+      "id": 1
+    },
+    {
+      "danhMuc": "aaaa",
+      "vungMien": {
+        "id": 1,
+        "vungMien": "Hà Nội"
+      },
+      "vaiTro": {
+        "id": 1,
+        "vaiTro": "Cá nhân"
+      },
+      "mucDich": {
+        "id": 1,
+        "mucDich": "Cần bán"
+      },
+      "tinhTrang": {
+        "id": 1,
+        "tinhTrang": "Mới"
+      },
+      "diaChi": "aaaaaaaaaa",
+      "dienTich": "8998",
+      "huong": {
+        "id": 1,
+        "huong": "Đông"
+      },
+      "tuaDe": "aaaaaaaaaaa",
+      "noiDung": "aaaaaaaaaaaaa",
+      "gia": "1231231233232",
+      "ngayDang": "2023-08-30",
+      "id": 2
+    },
+    {
+      "danhMuc": "ádasdasd",
+      "vungMien": {
+        "id": 1,
+        "vungMien": "Hà Nội"
+      },
+      "vaiTro": {
+        "id": 2,
+        "vaiTro": "Công ty"
+      },
+      "mucDich": {
+        "id": 1,
+        "mucDich": "Cần bán"
+      },
+      "tinhTrang": {
+        "id": 1,
+        "tinhTrang": "Mới"
+      },
+      "diaChi": "Da Nang",
+      "dienTich": "8998",
+      "huong": null,
+      "tuaDe": "aaaaaaaaaaa",
+      "noiDung": "qaaaaaa",
+      "gia": "3333333333",
+      "ngayDang": "2023-08-24",
+      "id": 3
+    },
+    {
+      "danhMuc": "âdadadadad",
+      "vungMien": {
+        "id": 1,
+        "vungMien": "Hà Nội"
+      },
+      "vaiTro": {
+        "id": 1,
+        "vaiTro": "Cá nhân"
+      },
+      "mucDich": {
+        "id": 2,
+        "mucDich": "Cần mua"
+      },
+      "tinhTrang": {
+        "id": 1,
+        "tinhTrang": "Mới"
+      },
+      "diaChi": "Da Nang",
+      "dienTich": "5555",
+      "huong": {
+        "id": 2,
+        "huong": "Tây"
+      },
+      "tuaDe": "aaaaaaaaaaa",
+      "noiDung": "adadadadad",
+      "gia": "999999999",
+      "ngayDang": "2023-08-30",
+      "id": 4
+    },
+    {
+      "danhMuc": null,
+      "vungMien": null,
+      "vaiTro": null,
+      "mucDich": null,
+      "tinhTrang": null,
+      "diaChi": "",
+      "dienTich": "",
+      "huong": null,
+      "tuaDe": "",
+      "noiDung": "",
+      "gia": "",
+      "ngayDang": null,
+      "id": 5
+    },
+    {
+      "danhMuc": "ssfdfgdfgfgf",
+      "vungMien": {
+        "id": 1,
+        "vungMien": "Hà Nội"
+      },
+      "vaiTro": {
+        "id": 2,
+        "vaiTro": "Công ty"
+      },
+      "mucDich": {
+        "id": 2,
+        "mucDich": "Cần mua"
+      },
+      "tinhTrang": {
+        "id": 1,
+        "tinhTrang": "Mới"
+      },
+      "diaChi": "Da Nang",
+      "dienTich": "565656",
+      "huong": null,
+      "tuaDe": "aaaaaaaaaaa",
+      "noiDung": "rtrtrtrtrtrtrt",
+      "gia": "545454545454",
+      "ngayDang": "2023-08-25",
+      "id": 6
+    }
+  ],
+  "huong": [
+    {
+      "id": 1,
+      "huong": "Đông"
+    },
+    {
+      "id": 2,
+      "huong": "Tây"
+    },
+    {
+      "id": 3,
+      "huong": "Nam"
+    },
+    {
+      "id": 4,
+      "huong": "Bắc"
+    }
+  ],
+  "vungMien": [
+    {
+      "id": 1,
+      "vungMien": "Hà Nội"
+    },
+    {
+      "id": 2,
+      "vungMien": "Đà Nẵng"
+    },
+    {
+      "id": 3,
+      "vungMien": "Huế"
+    },
+    {
+      "id": 4,
+      "vungMien": "Sài Gòn"
+    }
+  ],
+  "vaiTro": [
+    {
+      "id": 1,
+      "vaiTro": "Cá nhân"
+    },
+    {
+      "id": 2,
+      "vaiTro": "Công ty"
+    }
+  ],
+  "mucDich": [
+    {
+      "id": 1,
+      "mucDich": "Cần bán"
+    },
+    {
+      "id": 2,
+      "mucDich": "Cần mua"
+    },
+    {
+      "id": 3,
+      "mucDich": "Cho thuê"
+    },
+    {
+      "id": 4,
+      "mucDich": "Cần thuê"
+    }
+  ],
+  "tinhTrang": [
+    {
+      "id": 1,
+      "tinhTrang": "Mới"
+    },
+    {
+      "id": 2,
+      "tinhTrang": "Đã sử dụng"
+    }
+  ]
+}

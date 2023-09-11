@@ -1,0 +1,48 @@
+<form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="updateProduct(id)">
+  <table>
+    <tr>
+      <td>Id</td>
+      <td><input type="text" formControlName="id"></td>
+    </tr>
+
+    <tr>
+      <td>Name</td>
+      <td><input type="text" formControlName="nameProduct"></td>
+    </tr>
+
+    <tr>
+      <td>Category</td>
+      <td>
+        <select formControlName="category" [compareWith]="compareWithId">
+          <option *ngFor="let item of categories" [ngValue]="item">{{item.nameCategory}}</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Quantity</td>
+      <td><input type="text" formControlName="quantity"></td>
+    </tr>
+
+    <tr>
+      <td>Date Release</td>
+      <td><input type="date" formControlName="dateRelease" >{{product.dateRelease}}</td>
+    </tr>
+
+    <tr>
+      <td>Price</td>
+      <td><input type="text" formControlName="price"></td>
+    </tr>
+
+    <tr>
+      <td>Description</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <button>Update</button>
+      </td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,76 @@
+<body>
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-4">
+            <h2 class="text-center">Danh sách <b>các bài viết</b></h2>
+          </div>
+          <div>
+            <div>
+              <div>
+                <input #inputSearchPrice type="text" placeholder="Giá..." class="form-control">
+                <button class="btn btn-primary" (click)="searchPrice(inputSearchPrice)">Tìm kiếm theo giá</button>
+              </div>
+
+              <div>
+                <input #inputSearchHuong type="text" placeholder="Hướng..." class="form-control">
+                <button class="btn btn-primary" (click)="searchHuong(inputSearchHuong)">Tìm kiếm theo hướng</button>
+              </div>
+
+              <div>
+                <input #inputSearchArea type="text" placeholder="Diện tích..." class="form-control">
+                <button class="btn btn-primary" (click)="searchArea(inputSearchArea)">Tìm kiếm theo diện tích</button>
+              </div>
+
+              <hr>
+
+              <div>
+                <h4>Tìm kiếm diện tích & giá</h4>
+                <input #inputSearchAll1 type="text" class="form-control" placeholder="Diện tích...">
+                <input #inputSearchAll2 type="text" class="form-control" placeholder="Giá...">
+                <button class="btn btn-primary" (click)="searchAll(inputSearchAll1, inputSearchAll2)">Tìm kiếm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Tiêu đề</th>
+          <th>Loại bài viết</th>
+          <th>Danh mục</th>
+          <th>Ngày đăng</th>
+          <th>Trạng thái</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of bdsList; index as i">
+          <td>{{i + 1}}</td>
+          <td>{{item.tuaDe}}</td>
+          <td>{{item.mucDich.mucDich}}</td>
+          <td>{{item.danhMuc}}</td>
+          <td>{{item.ngayDang}}</td>
+          <td>{{item.tinhTrang.tinhTrang}}</td>
+          <td>
+            <a [routerLink]="[]" class="view" title="View" data-toggle="tooltip"><i
+              class="material-icons">&#xE417;</i></a>
+            <a [routerLink]="[]" class="edit" title="Edit" data-toggle="tooltip"><i
+              class="material-icons">&#xE254;</i></a>
+            <a class=" btn btn-primary" style="background: none"><i class="fa-solid fa-trash"
+                                                                    style="color: #d41616;"></i></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>

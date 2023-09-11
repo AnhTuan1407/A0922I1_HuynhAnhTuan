@@ -1,0 +1,99 @@
+<!--<form [formGroup]="productForm" (ngSubmit)="submit()">-->
+<!--  <h1>Create new product</h1>-->
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <td>Name</td>-->
+<!--      <td><input type="text" formControlName="nameProduct"></td>-->
+<!--      <p class="text-danger"-->
+<!--         *ngIf="productForm.controls.nameProduct?.touched && productForm.controls.nameProduct?.errors?.required">Not-->
+<!--        empty</p>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      <td>Category</td>-->
+<!--      <select formControlName="category">-->
+<!--        <option *ngFor="let item of categories" [ngValue]="item">{{item.nameCategory}}</option>-->
+<!--      </select>-->
+<!--      <p class="text-danger"-->
+<!--         *ngIf="productForm.controls.category?.touched && productForm.controls.category?.errors?.required">Not empty</p>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      <td>Quantity</td>-->
+<!--      <td><input type="text" formControlName="quantity"></td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      <td>Date release</td>-->
+<!--      <td><input type="date" formControlName="dateRelease"></td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      <td>Price</td>-->
+<!--      <td><input type="text" formControlName="price"></td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      <td>Description</td>-->
+<!--      <td><input type="text" formControlName="description"></td>-->
+<!--      <p class="text-danger"-->
+<!--         *ngIf="productForm.controls.description?.touched && productForm.controls.description?.errors?.required">Not-->
+<!--        Empty</p>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--      <td>-->
+<!--        <button [disabled]="productForm.invalid">Create</button>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--</form>-->
+
+<div class="container">
+  <div class="wrapper">
+    <div class="form">
+      <h1 class="title">CREATE NEW PRODUCT</h1>
+
+      <form [formGroup]="productForm" (ngSubmit)="submit()" class="myForm">
+        <div class="control-from">
+          <label for="nameProduct">Name Product <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="nameProduct" id="nameProduct">
+          <p class="text-danger"
+             *ngIf="productForm.controls.nameProduct?.touched && productForm.controls.nameProduct?.errors?.required">Not
+            empty</p>
+        </div>
+
+        <div class="control-from">
+          <label for="category">Category <span class="text-danger">(*)</span></label>
+          <select formControlName="category" id="category">
+            <option *ngFor="let item of categories" [ngValue]="item">{{item.nameCategory}}</option>
+          </select>
+        </div>
+
+        <div class="control-from">
+          <label for="quantity">Quantity <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="quantity" id="quantity">
+        </div>
+
+        <div class="control-from">
+          <label for="dateRelease">Date Release <span class="text-danger">(*)</span></label>
+          <input type="date" formControlName="dateRelease" id="dateRelease">
+        </div>
+
+        <div class="full-width">
+          <label for="price">Price <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="price" id="price">
+        </div>
+
+        <div class="control-from">
+          <label for="description">Description <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="description" id="description">
+        </div>
+
+        <div class="button">
+          <button [disabled]="productForm.invalid" id="register">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

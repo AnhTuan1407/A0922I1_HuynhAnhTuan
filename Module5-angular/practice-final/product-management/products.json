@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "idProduct": 1,
+      "nameProduct": "IPhone 12",
+      "category": "Điện thoại",
+      "quantity": "20",
+      "dateRelease": "20/07/2021",
+      "price": 2400000,
+      "description": "New"
+    },
+    {
+      "idProduct": 2,
+      "nameProduct": "Samsung Galaxy S22 Ultra",
+      "category": "Điện thoại",
+      "quantity": "19",
+      "dateRelease": "20/9/2022",
+      "price": 2800000,
+      "description": "New"
+    },
+    {
+      "idProduct": 3,
+      "nameProduct": "Sony 4k",
+      "category": "Tivi",
+      "quantity": "30",
+      "dateRelease": "17/05/2020",
+      "price": 20000000,
+      "description": "New"
+    },
+    {
+      "idProduct": 4,
+      "nameProduct": "Panasonic",
+      "category": "Tủ lạnh",
+      "quantity": "50",
+      "dateRelease": "16/08/2021",
+      "price": 1600000,
+      "description": "New"
+    },
+    {
+      "idProduct": 5,
+      "nameProduct": "IPhone 11 pro max",
+      "category": "Điện thoại",
+      "quantity": "20",
+      "dateRelease": "21/04/2020",
+      "price": 19000000,
+      "description": "Old"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="form">
+      <h1 class="title">CREATE NEW PRODUCT</h1>
+
+      <form [formGroup]="bdsForm" (ngSubmit)="submit()" class="myForm">
+        <div class="control-from">
+          <label for="danhMuc">Danh Mục</label>
+          <input type="text" formControlName="danhMuc" id="danhMuc">
+        </div>
+
+        <div class="control-from">
+          <label for="vungMien">Vùng miền</label>
+          <select formControlName="vungMien" id="vungMien">
+            <option *ngFor="let item of vungMienList" [ngValue]="item">{{item.vungMien}}</option>
+          </select>
+        </div>
+
+        <div class="control-from">
+          <label for="vaiTro">Bạn là</label>
+          <select formControlName="vaiTro" id="vaiTro">
+            <option *ngFor="let item of vaiTroList" [ngValue]="item">{{item.vaiTro}}</option>
+          </select>
+        </div>
+
+        <div class="control-from">
+          <label for="mucDich">Bạn đăng tin</label>
+          <select formControlName="mucDich" id="mucDich">
+            <option *ngFor="let item of mucDichList" [ngValue]="item">{{item.mucDich}}</option>
+          </select>
+        </div>
+
+        <div class="control-from">
+          <label for="tinhTrang">Tình trạng</label>
+          <select formControlName="tinhTrang" id="tinhTrang">
+            <option *ngFor="let item of tinhTrangList" [ngValue]="item">{{item.tinhTrang}}</option>
+          </select>
+        </div>
+
+        <div class="control-from">
+          <label for="diaChi">Địa chỉ <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="diaChi" id="diaChi">
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.diaChi?.touched && bdsForm.controls.diaChi?.errors?.required">Không được để trống!</p>
+        </div>
+
+        <div class="control-from">
+          <label for="dienTich">Diện tích <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="dienTich" id="dienTich">
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.dienTich?.touched && bdsForm.controls.dienTich?.errors?.required">Không được để trống!</p>
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.dienTich?.dirty && bdsForm.controls.dienTich.value < 20">Phải lớn hơn 20m2</p>
+
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.dienTich?.dirty && bdsForm.controls.dienTich.value.isNaN">Phải là số</p>
+        </div>
+
+        <div class="control-from">
+          <label for="huong">Hướng <span class="text-danger">(*)</span></label>
+          <select formControlName="huong" id="huong">
+            <option *ngFor="let item of huongList" [ngValue]="item">{{item.huong}}</option>
+          </select>
+        </div>
+
+        <div class="control-from">
+          <label for="tuaDe">Tựa đề <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="tuaDe" id="tuaDe">
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.tuaDe?.touched && bdsForm.controls.tuaDe?.errors?.required">Không được để trống!</p>
+        </div>
+
+        <div class="control-from">
+          <label for="noiDung">Nội dung <span class="text-danger">(*)</span></label>
+          <textarea formControlName="noiDung" id="noiDung" cols="30" rows="10"></textarea>
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.noiDung?.touched && bdsForm.controls.noiDung?.errors?.required">Không được để trống!</p>
+        </div>
+
+        <div class="control-from">
+          <label for="gia">Giá <span class="text-danger">(*)</span></label>
+          <input type="text" formControlName="gia" id="gia">
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.gia?.touched && bdsForm.controls.gia?.errors?.required">Không được để trống!</p>
+
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.gia?.dirty && bdsForm.controls.gia.value < 100000000">Phải lớn hơn 100.000.000 VND</p>
+
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.gia?.touched && bdsForm.controls.gia.value.NaN">Phải là số</p>
+        </div>
+
+        <div class="control-from">
+          <label for="ngayDang">Giá <span class="text-danger">(*)</span></label>
+          <input type="date" formControlName="ngayDang" id="ngayDang">
+          <p class="text-danger"
+             *ngIf="bdsForm.controls.ngayDang?.touched && bdsForm.controls.ngayDang?.errors?.required">Không được để trống!</p>
+        </div>
+
+        <div class="button">
+<!--          <button [disabled]="bdsForm.invalid" id="register"  data-toggle="modal" data-target="#create" >Đăng tin</button>-->
+          <a class=" btn btn-primary" data-toggle="modal" data-target="#create"
+             style="background: none">Đăng tin</a>
+        </div>
+
+
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal delete-->
+<div class="modal fade" id="create" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-danger" id="exampleModalLabel">Xác nhận thông tin</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+<!--          <tr>-->
+<!--            <td>Danh mục: </td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Vùng miền:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Bạn là:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Cần bán:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Tình trạng:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Địa chỉ: </td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Diện tích:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Giá:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Nội dung:</td>-->
+<!--            <td></td>-->
+<!--          </tr>-->
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" [disabled]="bdsForm.invalid" (click)="createBds()">Xác nhận
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="deleteProduct(id)">
+  <table>
+    <tr>
+      <td>Id</td>
+      <td><input type="text" formControlName="id"></td>
+    </tr>
+
+    <tr>
+      <td>Name</td>
+      <td><input type="text" formControlName="nameProduct"></td>
+    </tr>
+
+    <tr>
+      <td>Quantity</td>
+      <td><input type="text" formControlName="quantity"></td>
+    </tr>
+
+    <tr>
+      <td>Date Release</td>
+      <td><input type="text" formControlName="dateRelease"></td>
+    </tr>
+
+    <tr>
+      <td>Price</td>
+      <td><input type="text" formControlName="price"></td>
+    </tr>
+
+    <tr>
+      <td>Description</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">GeeksForGeeks</h4>
+        </div>
+        <div class="modal-body">
+          <p>One Stop Solution for all CS problems</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger"
+                  (click)="closePopup()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
