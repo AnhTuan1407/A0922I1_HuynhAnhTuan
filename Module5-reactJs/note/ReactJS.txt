@@ -1,0 +1,5 @@
+//Cài đặt json-server
+npm i -g json-server
+
+//Khởi chạy json-server
+json-server --watch db.json --port 8080

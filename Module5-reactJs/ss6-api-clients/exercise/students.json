@@ -1,0 +1,81 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Duong Tay",
+      "email": "duongtay2003@gmail.com",
+      "phoneNumber": 8374979487,
+      "address": "Da Nang"
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "thang@gmail.com",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 2
+    },
+    {
+      "name": "Tan",
+      "email": "adad@gmail.com",
+      "phoneNumber": "45798347",
+      "address": "Da Nag",
+      "id": 3
+    },
+    {
+      "name": "abc",
+      "email": "thang@gmail.com",
+      "phoneNumber": "234234234",
+      "address": "Quang Nam",
+      "id": 4
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "phoneNumber": "2",
+      "address": "a",
+      "id": 5
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "asdasdasd",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 6
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "a",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 7
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "a",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 8
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "a",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 9
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "a",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 10
+    },
+    {
+      "name": "Anh Tuan",
+      "email": "adadd",
+      "phoneNumber": "0369705323",
+      "address": "Da Nang City",
+      "id": 11
+    }
+  ]
+}
