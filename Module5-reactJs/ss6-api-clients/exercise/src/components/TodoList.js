@@ -12,7 +12,7 @@ function TodoList() {
             setTodoList(result);
         }
         callApi()
-    }, [])
+    }, [todoList])
 
     return (
         <>
@@ -24,7 +24,6 @@ function TodoList() {
                 onSubmit={(values, { setSubmitting }) => {
                     todoService.save(values);
                     setSubmitting(false)
-                    window.location.reload();
                 }}
             >
                 <Form>

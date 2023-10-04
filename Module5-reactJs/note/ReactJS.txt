@@ -3,3 +3,15 @@ npm i -g json-server
 
 //Khởi chạy json-server
 json-server --watch db.json --port 8080
+
+npm i formik
+
+npm i yup
+
+npm i react-router-dom
+
+npm i react-loader-spinner
+
+npm i react-toastify
+
+npm i axios
