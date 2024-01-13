@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .cancel-form {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<table id="dataTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Người 1</td>
+        <td><button onclick="showCancelForm(1)">Hủy</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Người 2</td>
+        <td><button onclick="showCancelForm(2)">Hủy</button></td>
+    </tr>
+    <!-- Thêm các hàng khác tương tự -->
+    </tbody>
+</table>
+
+<div id="cancelForm" class="cancel-form">
+    <h2>Nguyên nhân hủy</h2>
+    <form onsubmit="cancelSubmit(event)">
+        <label for="reason">Nguyên nhân:</label>
+        <input type="text" id="reason" name="reason" required>
+        <button type="submit">Xác nhận hủy</button>
+    </form>
+</div>
+
+<script>
+    function showCancelForm(id) {
+        // Ẩn tất cả các form trước khi hiển thị form mới
+        var forms = document.getElementsByClassName("cancel-form");
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].style.display = "none";
+        }
+
+        // Hiển thị form cho id tương ứng
+        var cancelForm = document.getElementById("cancelForm");
+        cancelForm.style.display = "block";
+
+        // Thêm thông tin id vào form để xác định người cần hủy
+        var hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "cancelId";
+        hiddenInput.value = id;
+        cancelForm.appendChild(hiddenInput);
+    }
+
+    function cancelSubmit(event) {
+        event.preventDefault();
+
+        // Lấy thông tin id từ form
+        var cancelId = document.querySelector("#cancelForm [name='cancelId']").value;
+
+        // Lấy nguyên nhân từ input
+        var reason = document.getElementById("reason").value;
+
+        // Thực hiện các bước hủy, ví dụ: gửi yêu cầu hủy đến máy chủ
+        console.log("Hủy người có ID " + cancelId + " với nguyên nhân: " + reason);
+
+        // Ẩn form sau khi hủy
+        document.getElementById("cancelForm").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

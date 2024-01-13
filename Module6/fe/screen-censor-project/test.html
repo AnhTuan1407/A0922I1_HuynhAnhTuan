@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    form {
+      display: none;
+    }
+
+    .date-input {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<table id="recordTable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Record 1</td>
+      <td><button onclick="showForm(1)">Add Phase</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Record 2</td>
+      <td><button onclick="showForm(2)">Add Phase</button></td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<form id="form">
+  <div class="date-input">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate">
+  </div>
+  <div id="phaseInputs">
+    <!-- Dynamic phase inputs will be added here -->
+  </div>
+  <button type="button" onclick="addPhase()">Add Phase</button>
+</form>
+
+<script>
+  function showForm(recordId) {
+    // Hide all forms
+    document.querySelectorAll('form').forEach(form => {
+      form.style.display = 'none';
+    });
+
+    // Show the selected form
+    document.getElementById('form').style.display = 'block';
+  }
+
+  function addPhase() {
+    const phaseInputs = document.getElementById('phaseInputs');      
+
+    // Create new input fields
+    const startDateInput = document.createElement('input');
+    startDateInput.type = 'date';
+    startDateInput.name = 'startDate';
+    startDateInput.placeholder = 'Start Date';
+
+    const endDateInput = document.createElement('input');
+    endDateInput.type = 'date';
+    endDateInput.name = 'endDate';
+    endDateInput.placeholder = 'End Date';
+
+    // Append new inputs to the phaseInputs div
+    
+    phaseInputs.appendChild(startDateInput);
+    phaseInputs.appendChild(endDateInput);
+  }
+</script>
+
+</body>
+</html>

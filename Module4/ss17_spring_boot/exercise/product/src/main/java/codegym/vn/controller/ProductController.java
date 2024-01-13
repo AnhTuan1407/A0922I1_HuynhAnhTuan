@@ -1,6 +1,5 @@
 package codegym.vn.controller;
 
-import codegym.vn.entity.Category;
 import codegym.vn.entity.Product;
 import codegym.vn.service.ICategoryService;
 import codegym.vn.service.IProductService;

@@ -37,7 +37,7 @@ function LibraryList() {
 
                                     <tr>
                                         <Link to={`/update/${item.id}`} className="btn btn-primary">Update</Link>
-                                        {/* <button onClick={e => handleDelete(book.id)} className="btn btn-danger">Delete</button> */}
+                                        <button onClick={e => handleDelete(item.id)} className="btn btn-danger">Delete</button>
                                     </tr>
                                 </tr>
                             ))

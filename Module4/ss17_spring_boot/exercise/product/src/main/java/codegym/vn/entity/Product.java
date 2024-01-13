@@ -1,11 +1,8 @@
 package codegym.vn.entity;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 @Entity
@@ -31,7 +28,7 @@ public class Product {
     @Min(1)
     @Column(name = "price")
     private double price;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "date_release")
     private Date dateRelease;
 

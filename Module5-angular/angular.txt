@@ -1,0 +1,32 @@
+1. Tạo dự án Angular mới: ng new ten_du_an
+2. Cài đặt queryString: npm install querystring --save
+3. Tạo component: ng g c ten_component
+4. Tạo file *ts - tạo đối tượng(model): ng g i ten_doi _tuong
+5. Tạo file service: ng g s ten_service
+6. Cài đặt json-server: npm install -g json-server
+7. Khởi chạy json-server: json-server --watch ten_file_json.json
+
+(*)Phân trang:
+1. Cài đặt: npm install ngx-pagination@5.1.1 --save
+2. <tr *ngFor="let item of list_name | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
+3. <pagination-controls (pageChange)="p = $event" previousLabel="Previous"
+                       nextLabel="Next" style="text-align: center"></pagination-controls>
+
+(*)Thông báo:
+
+npm install ngx-toastr@12.1.0 --save
+ToastrModule.forRoot()
+this._toastr.success('Thêm mới thành công!', 'Thông báo');
+
+npm i sweetalert2
+
+(*)Validate
+productForm: FormGroup = new FormGroup({
+  id: new FormControl(),
+  nameProduct: new FormControl('', [Validators.required, Validators.maxLength(10)]),
+  price: new FormControl('', [Validators.required, Validators.min(1000), Validators.max(2000)]),
+  description: new FormControl('', [Validators.required, Validators.maxLength(30)]),
+});
+
+phoneNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      email: ['', [Validators.required, Validators.email]],

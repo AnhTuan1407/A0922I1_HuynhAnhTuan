@@ -1,3 +1,6 @@
+//Khởi tạo dự án
+npx create-react-app `project-name` 
+
 //Cài đặt json-server
 npm i -g json-server
 
@@ -14,4 +17,14 @@ npm i react-loader-spinner
 
 npm i react-toastify
 
+npm i react-paginate
+
 npm i axios
+
+Để sử dụng được redux cần cài đặt các gói sau:
+
+npm install redux  (Sử dụng thư viện redux quản lý state)
+npm install react-redux (Đi kèm với gói redux cho phép sử dụng các hàm trong thư viện)
+npm install redux-saga (Cho phép redux xử lý các side-effect)
+npm install react-router-dom (Sử dụng gói này để quản lí router)
+npm install axios (Sử dụng gói này để call các API)

@@ -1,0 +1,106 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Genshin Impact",
+      "author": "Mihoyo",
+      "description": "keqing c4",
+      "quantity": 21
+    },
+    {
+      "name": "Jujutsu Kaisen",
+      "author": "Gege",
+      "description": "hmu hmu",
+      "quantity": 150,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "One Piece",
+      "author": "av",
+      "description": "Real",
+      "quantity": 8
+    },
+    {
+      "name": "Honkai Star Rail",
+      "author": "Stelle",
+      "description": "450 rolls e1s1",
+      "quantity": 303,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "idCard": "5555",
+      "name": "Nokia",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "One Piece",
+      "id": 3,
+      "status": 0
+    },
+    {
+      "idCard": "1111",
+      "name": "Nguyen Van A",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Genshin Impact",
+      "status": 1,
+      "id": 4
+    },
+    {
+      "idCard": "34234234",
+      "name": "fsdfsdfs",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "One Piece",
+      "status": 0,
+      "id": 6
+    },
+    {
+      "idCard": "23546",
+      "name": "Tay",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Honkai Star Rail",
+      "status": 0,
+      "id": 7
+    },
+    {
+      "idCard": "009911",
+      "name": "AnhTuan",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Honkai Star Rail",
+      "status": 0,
+      "id": 8
+    },
+    {
+      "idCard": "5555",
+      "name": "Nokia",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Honkai Star Rail",
+      "status": 1,
+      "id": 9
+    },
+    {
+      "idCard": "",
+      "name": "",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Honkai Star Rail",
+      "status": 1,
+      "id": 10
+    },
+    {
+      "idCard": "",
+      "name": "",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Honkai Star Rail",
+      "status": 1,
+      "id": 11
+    },
+    {
+      "idCard": "",
+      "name": "",
+      "dateOfBorrow": "18-10-2023",
+      "bookName": "Honkai Star Rail",
+      "status": 1,
+      "id": 12
+    }
+  ]
+}

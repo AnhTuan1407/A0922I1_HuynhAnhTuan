@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous"></head>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+        .title{
+            text-align: center;
+            color: #87AA74;
+            margin: 35px;
+        }
+        .container{
+            text-align: center;
+        }
+        .row-scope{
+            text-align: center;
+        }
+        .row-scope td{
+            background-color: #b9daa4;
+        }
+        .row-tbody{
+            text-align: center;
+        }
+        .row-name{
+            text-align: left;
+            width: 300px;
+        }
+
+    </style>
+<body>
+<h2 class="title">ĐĂNG KÝ GIÁO VIÊN HƯỚNG DẪN</h2>
+<div class="container" >
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <table class="table table-bordered">
+            <thead class="table">
+            <tr class="row-scope">
+                <td>STT</td>
+                <td>Tên giáo viên</td>
+                <td>Tình trạng đăng ký</td>
+                <td>Xem</td>
+                <td>Chọn</td>
+            </tr>
+            </thead>
+            <tbody class="row-tbody">
+            <tr>
+                <td>1</td>
+                <td class="row-name">Nguyễn Thanh Công</td>
+                <td>5/10</td>
+                <td><button type="button" class="btn btn-outline-secondary">Chi tiết</button></td>
+                <td><button type="button" class="btn btn-outline-success">Đăng ký</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="row-name">Trương Tấn Hải</td>
+                <td>5/10</td>
+                <td><button type="button" class="btn btn-outline-secondary">Chi tiết</button></td>
+                <td><button type="button" class="btn btn-outline-success">Đăng ký</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="row-name">Nguyễn Mai Huyền Linh</td>
+                <td>5/10</td>
+                <td><button type="button" class="btn btn-outline-secondary">Chi tiết</button></td>
+                <td><button type="button" class="btn btn-outline-success">Đăng ký</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="row-name">Trần Đức Phương</td>
+                <td>5/10</td>
+                <td><button type="button" class="btn btn-outline-secondary">Chi tiết</button></td>
+                <td><button type="button" class="btn btn-outline-success">Đăng ký</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="row-name">Nguyễn Ngọc Anh Quốc</td>
+                <td>5/10</td>
+                <td><button type="button" class="btn btn-outline-secondary">Chi tiết</button></td>
+                <td><button type="button" class="btn btn-outline-success">Đăng ký</button></td>
+            </tr>
+            </tbody>
+        </table></div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row justify-content-center" style="display: inline-block">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1/2</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

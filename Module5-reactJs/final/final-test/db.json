@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "idProduct": "PROD-0001",
+      "name": "Blackmores CoQ10",
+      "description": "Hàng xịn",
+      "category": 1,
+      "price": 513000,
+      "quantity": 100,
+      "date": "2023-10-19",
+      "id": 1
+    },
+    {
+      "idProduct": "PROD-0002",
+      "name": "Máy đo huyết áp",
+      "description": "Hàng real\n",
+      "category": 1,
+      "price": 1350000,
+      "quantity": 500,
+      "date": "2023-10-10",
+      "id": 2
+    },
+    {
+      "idProduct": "PROD-0003",
+      "name": "Efferalgan",
+      "description": "VIP",
+      "category": "3",
+      "price": 30000,
+      "quantity": 65,
+      "date": "2023-10-10",
+      "id": 3
+    },
+    {
+      "idProduct": "PROD-0004",
+      "name": "Nhiệt kế hồng ngoại",
+      "description": "Hàng xịn",
+      "category": "2",
+      "price": 20,
+      "quantity": 768000,
+      "date": "2023-10-03",
+      "id": 4
+    },
+    {
+      "idProduct": "PROD-0001",
+      "name": "Nokia",
+      "description": "aaa",
+      "category": 1,
+      "price": 23,
+      "quantity": 23,
+      "date": "2023-10-04",
+      "id": 5
+    },
+    {
+      "idProduct": "PROD-0005",
+      "name": "Nokia",
+      "description": "aaaa",
+      "category": "3",
+      "price": 1,
+      "quantity": 1,
+      "date": "2023-10-03",
+      "id": 6
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Thực phẩm chức năng",
+      "description": "Loại 1"
+    },
+    {
+      "id": 2,
+      "name": "Thiết bị y tế",
+      "description": "Loại 1"
+    },
+    {
+      "id": 3,
+      "name": "Dược phẩm",
+      "description": "Loại 1"
+    }
+  ]
+}

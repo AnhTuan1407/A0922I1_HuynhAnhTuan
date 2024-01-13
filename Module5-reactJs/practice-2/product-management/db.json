@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "name": "Nokia",
+      "category": {
+        "id": "3",
+        "name": ""
+      },
+      "price": "12000000",
+      "quantity": "1",
+      "dateOfManufacture": "24-10-2023",
+      "description": "",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Điện thoại"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    },
+    {
+      "id": 3,
+      "name": "Tủ lạnh"
+    },
+    {
+      "id": 4,
+      "name": "Tivi"
+    }
+  ]
+}
